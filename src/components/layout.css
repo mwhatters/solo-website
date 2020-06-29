@@ -65,13 +65,19 @@
   width: 100%;
   height: 100%;
   background-color: yellow;
-  transition: background-color 0.5s ease;
+  transition: filter 0.4s ease;
 }
 
 .project__profile_item:hover {
-  background-color: lightblue;
+  filter: brightness(90%);
   cursor: pointer;
 }
+
+.project__highlighted__wrapper {
+  flex: inherit;
+}
+
+
 
 /* ABOUT */
 

@@ -18,6 +18,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        layout: require.resolve(`./src/components/layout.js`)
       },
     },
     `gatsby-transformer-sharp`,

@@ -22,19 +22,24 @@ const ProjectImage = ({ projectKey }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      ord1: file(relativePath: { eq: "ords/1.png" }) {
+      glyph: file(relativePath: { eq: "projects/glyph.jpg" }) {
         childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  return (
-    <Img fixed={data[projectKey].childImageSharp.fixed} />
-  )
+  if (data[projectKey]) {
+    return (
+      <Img fluid={data[projectKey].childImageSharp.fluid} />
+    )
+  }
+
+  return (<div />)
+
 }
 
 export default ProjectImage
