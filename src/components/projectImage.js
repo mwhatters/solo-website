@@ -14,10 +14,11 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ProjectImage = ({ projectKey }) => {
+const ProjectImage = ({ projectKey, parentStyle }) => {
 
   ProjectImage.propTypes = {
     projectKey: PropTypes.string.isRequired,
+    parentStyle: PropTypes.object,
   }
 
   const data = useStaticQuery(graphql`
@@ -34,7 +35,10 @@ const ProjectImage = ({ projectKey }) => {
 
   if (data[projectKey]) {
     return (
-      <Img fluid={data[projectKey].childImageSharp.fluid} />
+      <Img 
+        fluid={data[projectKey].childImageSharp.fluid} 
+        style={parentStyle}
+      />
     )
   }
 

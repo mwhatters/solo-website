@@ -5,60 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Spacer from "../components/util/spacer"
 import ProjectProfile from "../components/projectProfile"
-
-
-const projects = {
-  glyph: {
-    name: 'Glyph',
-    pageLink: '/music/glyph',
-    imageKey: 'glyph',
-  },
-  sc2020: {
-    name: 'SC2020',
-    pageLink: '/music/sc2020',
-    imageKey: 'sc2020',
-  },
-  brookspark: {
-    name: 'Brooks Park',
-    pageLink: '/projects/brookspark',
-    imageKey: 'brookspark',
-  },
-  restyoureyeseasynow: {
-    name: 'Rest your Eyes Easy, Now',
-    pageLink: '/projects/restyoureyeseasynow',
-    imageKey: 'restyoureyeseasynow',
-  },
-  sib: {
-    name: 'Luna',
-    pageLink: '/projects/sib',
-    imageKey: 'sib',
-  },
-  ontothemoon: {
-    name: 'On to the Moon',
-    pageLink: '/projects/ontothemoon',
-    imageKey: 'ontothemoon',
-  },
-  cheshireking: {
-    name: 'Cheshire King',
-    pageLink: '/projects/cheshireking',
-    imageKey: 'cheshireking',
-  },
-  intosilence: {
-    name: 'Into Silence',
-    pageLink: '/projects/intosilence',
-    imageKey: 'intosilence',
-  },
-  aloud: {
-    name: 'Aloud',
-    pageLink: '/projects/aloud',
-    imageKey: 'aloud',
-  },
-  onisolation: {
-    name: 'On Isolation',
-    pageLink: '/projects/onisolation',
-    imageKey: 'onisolation',
-  },
-}
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import projects from '../lib/projects' 
 
 export default class ProjectsPage extends React.Component {
   constructor(props) {
@@ -112,10 +60,11 @@ export default class ProjectsPage extends React.Component {
     if (this.state.highlightedProjectKey) {
       let currentProject = projects[this.state.highlightedProjectKey];
       content = (
-        <div className="project__highlighted__wrapper">
-          <p>HEY!</p>
-          <ProjectProfile project={currentProject} highlighted={true} onBack={() => this.goToGrid()}/>
-        </div>
+          <ProjectProfile 
+            project={currentProject}
+            highlighted={true} 
+            onBack={() => this.goToGrid()}
+          />
       )
     } else {
       let numberOfRows = Math.ceil(Object.entries(projects).length / 3)
@@ -141,7 +90,15 @@ export default class ProjectsPage extends React.Component {
         <div className="music__main__wrapper">
           <SEO title="Music" />
           <Spacer marginTop={100} />
-          {content}
+          <SwitchTransition>
+            <CSSTransition
+              key={this.state.highlightedProjectKey}
+              addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+              classNames='fade'
+            >
+              {content}
+            </CSSTransition>
+          </SwitchTransition>
         </div> 
       </Layout>
     )
