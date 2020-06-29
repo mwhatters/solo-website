@@ -10,11 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Body from "../components/body"
 import Navbar from "../components/navbar"
-
-import Header from "./body"
+import { TransitionPortal } from "gatsby-plugin-transition-link";
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, alignment }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,22 +26,30 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <div className="body__main-wrapper">
+      <div 
+        className="body__main-wrapper"
+        style={{
+          alignItems: alignment,
+        }}
+      >
         <Body
           children={children} 
           siteTitle={data.site.siteMetadata.title} 
         />
       </div>
 
-      <div className="navbar__main-wrapper">
-        <Navbar/>
-      </div>
+      <TransitionPortal>
+        <div className="navbar__main-wrapper">
+          <Navbar/>
+        </div>
+      </TransitionPortal>
     </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  alignemnt: PropTypes.string,
 }
 
 export default Layout

@@ -16,67 +16,68 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ ordnum }) => {
+const TitleImage = ({ ordnum, visible }) => {
 
-  Image.propTypes = {
+  TitleImage.propTypes = {
     ordnum: PropTypes.number,
+    visible: PropTypes.bool,
   }
 
   const data = useStaticQuery(graphql`
     query {
       ord1: file(relativePath: { eq: "ords/1.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord2: file(relativePath: { eq: "ords/2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord3: file(relativePath: { eq: "ords/3.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord4: file(relativePath: { eq: "ords/4.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord5: file(relativePath: { eq: "ords/5.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord6: file(relativePath: { eq: "ords/6.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord7: file(relativePath: { eq: "ords/7.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       ord8: file(relativePath: { eq: "ords/8.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -85,15 +86,17 @@ const Image = ({ ordnum }) => {
 
   let ordnumLookup = 'ord' + ordnum;
 
+  function imgClass() {
+    if (visible) {
+      return "index__main-img index__main_visible"
+    }
+
+    return "index__main-img"
+  }
+
   return (
-    <CSSTransition
-      key={ordnum}
-      classNames="header"
-      timeout={{ enter: 500, exit: 500 }}
-    >
-      <Img className="header__main-img" fluid={data[ordnumLookup].childImageSharp.fluid} />
-    </CSSTransition>
+    <Img className={imgClass()} fixed={data[ordnumLookup].childImageSharp.fixed} />
   )
 }
 
-export default Image
+export default TitleImage

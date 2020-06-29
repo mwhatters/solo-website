@@ -3,14 +3,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 import React, { useState, setState } from "react"
-import Image from "../components/image"
+import TitleImage from "../components/titleImage"
 import { timeout } from "../lib/timeout"
 import storage from "../lib/storage"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { headerImageState: this.getHeaderState() }
+    this.state = { }
   }
 
   static propTypes = {
@@ -23,51 +23,34 @@ export default class IndexPage extends React.Component {
     mainHeader: false,
   }
 
-  getHeaderState() {
-    return storage.get('headerShown', 1) ? 1 : 1;
-  }
-
-  async headerIntroTransition() {
-    while (this.state.headerImageState < 7) {
-      await timeout(1000)
-
-      if (this.state.headerImageState === 6) {
-        storage.set('headerShown', 1, 1);
-      }
-
-      this.setState((state) => {
-        return { headerImageState: this.state.headerImageState + 1 };
-      });
-    }
+  async indexIntro() {
+    await timeout(1000);
   }
 
   componentDidMount() {
     if (this.state.headerImageState < 8) {
-      this.headerIntroTransition();
+      this.indexIntro();
     }
-  }
-
-  headerContent() {
-    if (this.props.mainHeader) {
-      return (
-        <div >
-          <Image ordnum={this.state.headerImageState} />
-        </div>
-      )
-    }
-
-    return (
-      <div>
-        Marshall Hattersley
-      </div>
-    )
   }
 
   render() {
     return (
-      <Layout>
-        <SEO title="Main" />
-        <Image ordnum={this.state.headerImageState} />
+      <Layout alignment='center'>
+        <div className="index__main__wrapper">
+          <SEO title="Main" />
+          <div className="index__image_stack">
+            <TitleImage visible={true} ordnum={8} />
+          </div>
+
+          <div className="index__title index__title_visible">
+            <div className="index__title_name">
+              Marshall Hattersley
+            </div>
+            <div>
+              Musician · Composer · Game Designer · Programmer
+            </div>
+          </div>
+        </div>
       </Layout>
     )
   }
