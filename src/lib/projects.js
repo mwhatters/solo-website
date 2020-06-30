@@ -30,7 +30,6 @@ const projects = {
         width="250" 
         height="300" 
         scrolling="no" 
-        frameborder="no" 
         allow="autoplay" 
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/845548390&color=%2394745c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
       </iframe>
@@ -110,7 +109,6 @@ const projects = {
         width="250"
         height="300"
         scrolling="no"
-        frameborder="no"
         allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/457891092&color=%2394745c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
       </iframe>

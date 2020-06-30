@@ -1,4 +1,3 @@
-import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Spacer from "../components/util/spacer"
@@ -7,79 +6,86 @@ import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import projects from '../lib/projects' 
 import { timeout } from '../lib/timeout' 
 import PatternInstance from "../components/patternInstance"
+import { useQueryParam, NumberParam, StringParam } from "use-query-params";
+import React, { useState, useEffect, useRef } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
+import queryString from 'query-string'
 
+const ProjectsPage = () => {
+  const [highlightedProjectKey, setHighlightedProjectKey] = useState(null);
+  const [project, setProjectParam] = useQueryParam('project', StringParam);
+  const scrollEl = useRef(null);
+  const numberOfRows = Math.ceil(Object.entries(projects).length / 3)
 
-const numberOfRows = Math.ceil(Object.entries(projects).length / 3)
-
-export default class ProjectsPage extends React.Component {
-  constructor(props) {
-    super(props);
-    smoothscroll.polyfill();
-    this.scrollRef = React.createRef();
-    this.state = {
-      highlightedProjectKey: null,
+  const projectQueryParamsPresent = () => {
+    let url = new URL(window.location)
+    let parsed = queryString.parse(url.search)
+    let currentProject = parsed.project
+    if (currentProject) {
+      setHighlightedProjectKey(currentProject)
+      return true;
     }
+
+    return false;
   }
 
-  scrollToTop = () => {
-    this.scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToTop = () => {
+    scrollEl.current.scrollIntoView({ behavior: "auto" })
   }
 
-  async highLightProject(projectKey) {
-    this.scrollToTop();
-    await timeout(200)
-    this.setState({ highlightedProjectKey: projectKey })
+  const highlightProject = async function(projectKey) {
+    scrollToTop()
+    setProjectParam(projectKey)
+    await timeout(500)
+    setHighlightedProjectKey(projectKey)
   }
 
-  goToGrid() {
-    this.setState({ highlightedProjectKey: null })
+  const returnToGrid = () => {
+    setProjectParam(undefined)
+    setHighlightedProjectKey(null)
   }
 
-  generateProjectLinks() {
+  const generateProjectLinks = () => {
     let musicProfiles = []
     let row = 1
     let col = 1
 
     for (const [key, projectData] of Object.entries(projects)) {
-        musicProfiles.push(
-          <div
-            onClick={() => this.highLightProject(key)}
-            key={projectData.name}
-            style={{
-              gridColumnStart: col,
-              gridColumnEnd: col,
-              gridRowStart: row,
-              gridRowEnd: row,
-            }}
-          >
-            <ProjectProfile project={projectData} highlighted={false} />
-          </div>
-        )
+      musicProfiles.push(
+        <div
+          onClick={() => highlightProject(key)}
+          key={projectData.name}
+          style={{
+            gridColumnStart: col,
+            gridColumnEnd: col,
+            gridRowStart: row,
+            gridRowEnd: row,
+          }}
+        >
+          <ProjectProfile project={projectData} highlighted={false} />
+        </div>
+      )
       col++; if (col > 3) { row++; col = 1 }
     }
 
     return musicProfiles
   }
 
-
-  render() {
-    let content;
-    
-    if (this.state.highlightedProjectKey) {
-      let currentProject = projects[this.state.highlightedProjectKey];
-      content = (
+  const generateContent = () => {
+    if (highlightedProjectKey || projectQueryParamsPresent()) {
+      let currentProject = projects[highlightedProjectKey]
+      return (
         <>
-          <ProjectProfile 
+          <ProjectProfile
             project={currentProject}
-            highlighted={true} 
-            onBack={() => this.goToGrid()}
+            highlighted={true}
+            onBack={() => returnToGrid()}
           />
           <div className="music__post_wrapper"></div>
         </>
       )
     } else {
-      content = (
+      return (
         <>
           <div
             className="music__grid"
@@ -88,52 +94,61 @@ export default class ProjectsPage extends React.Component {
               gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
             }}
           >
-            {this.generateProjectLinks()}
+            {generateProjectLinks()}
           </div>
           <div className="music__post_wrapper"></div>
         </>
       )
     }
+  }
 
-    const projectIsHighlighted = this.state.highlightedProjectKey;
-
+  const backgroundContent = () => {
     return (
-      <Layout scrollEnabled={!projectIsHighlighted}>
-        <div ref={this.scrollRef} className="music__main__top" />
-        <div 
-          className="music__main__wrapper"
+      <SwitchTransition>
+        <CSSTransition
+          key={highlightedProjectKey}
+          addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+          classNames='fade'
         >
-          <SEO title="Projects" />
-          <Spacer marginTop={100} />
-          <SwitchTransition>
-            <CSSTransition
-              key={this.state.highlightedProjectKey}
-              addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
-              classNames='fade'
-            >
-              <div style={{ position: 'relative' }}>
-                <PatternInstance opacity="0.2" top={-50} left={-100} variation={6} animation="g3" />
-                <PatternInstance opacity="0.2" top={150} left={-400} variation={3} animation="g5" />
-                <PatternInstance opacity="0.2" top={0} right={-400} variation={2} animation="g6" />
-                <PatternInstance opacity="0.2" top={400} left={-150} variation={5} animation="g1" />
-                <PatternInstance opacity="0.2" bottom={0} right={-150} variation={7} animation="g2" />
-                <PatternInstance opacity="0.2" bottom={-600} right={-150} variation={4} animation="g-main" />
-                <PatternInstance opacity="0.2" bottom={-1000} right={100} variation={8} animation="g4" />
-              </div>
-            </CSSTransition>
-          </SwitchTransition>
-          <SwitchTransition>
-            <CSSTransition
-              key={this.state.highlightedProjectKey}
-              addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
-              classNames='fade'
-            >
-              {content}
-            </CSSTransition>
-          </SwitchTransition>
-        </div> 
-      </Layout>
+          <div style={{ position: 'relative' }}>
+            <PatternInstance opacity="0.2" top={-50} left={-100} variation={6} animation="g3" />
+            <PatternInstance opacity="0.2" top={150} left={-400} variation={3} animation="g5" />
+            <PatternInstance opacity="0.2" top={0} right={-400} variation={2} animation="g6" />
+            <PatternInstance opacity="0.2" top={400} left={-150} variation={5} animation="g1" />
+            <PatternInstance opacity="0.2" bottom={0} right={-150} variation={7} animation="g2" />
+            <PatternInstance opacity="0.2" bottom={-600} right={-150} variation={4} animation="g-main" />
+            <PatternInstance opacity="0.2" bottom={-1000} right={100} variation={8} animation="g4" />
+          </div>
+        </CSSTransition>
+      </SwitchTransition>
     )
   }
+
+  const foregroundContent = () => {
+    return (
+      <SwitchTransition>
+        <CSSTransition
+          key={highlightedProjectKey}
+          addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+          classNames='fade'
+        >
+          {generateContent()}
+        </CSSTransition>
+      </SwitchTransition>
+    )
+  }
+
+  return (
+    <Layout scrollEnabled={!highlightedProjectKey}>
+      <div ref={scrollEl} className="music__main__top" />
+      <div className="music__main__wrapper">
+        <SEO title="Projects" />
+        <Spacer marginTop={100} />
+        {backgroundContent()}
+        {foregroundContent()}
+      </div>
+    </Layout>
+  )
 }
 
+export default ProjectsPage

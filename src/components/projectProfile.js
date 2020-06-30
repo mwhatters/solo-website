@@ -12,7 +12,7 @@ export default class ProjectProfile extends React.Component {
   }
 
   static propTypes = {
-    project: PropTypes.object.isRequired,
+    project: PropTypes.object,
     highlighted: PropTypes.bool,
     onBack: PropTypes.func,
   }
@@ -22,6 +22,11 @@ export default class ProjectProfile extends React.Component {
   }
 
   render() {
+    if (!this.props.project) {
+      return (
+        <div />
+      )
+    }
     let projectImage;
     if (this.props.project.imageContent) {
       projectImage = this.props.project.imageContent
