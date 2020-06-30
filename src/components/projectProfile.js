@@ -53,7 +53,10 @@ export default class ProjectProfile extends React.Component {
               className="project__profile__back"
               onClick={this.onBack}
             >
-              ← Back to Grid
+              ↓
+              <span style={{position: 'relative', top: '2px', marginLeft: '4px'}}>
+                Back to Grid
+              </span>
             </div>
           </div>
         </div>

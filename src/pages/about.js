@@ -69,7 +69,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="Projects" />
+      <SEO title="About" />
         <Panel
           imageContent={profileImageContent}
           content={profileContent}

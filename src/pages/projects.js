@@ -16,6 +16,8 @@ export default class ProjectsPage extends React.Component {
     }
   }
 
+  static numberOfRows = Math.ceil(Object.entries(projects).length / 3)
+
   highLightProject(projectKey) {
     this.setState({ highlightedProjectKey: projectKey })
   }
@@ -44,10 +46,7 @@ export default class ProjectsPage extends React.Component {
             <ProjectProfile project={projectData} highlighted={false} />
           </div>
         )
-      
-
-      col++
-      if (col > 3) { row++; col = 1}
+      col++; if (col > 3) { row++; col = 1 }
     }
 
     return musicProfiles
@@ -67,16 +66,12 @@ export default class ProjectsPage extends React.Component {
           />
       )
     } else {
-      let numberOfRows = Math.ceil(Object.entries(projects).length / 3)
-
       content = (
         <div
           className="music__grid"
           style={{
             gridTemplateColumns: `repeat(3, 1fr)`,
-            gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
-            height: 266.66 * numberOfRows,
-            width: `800px`,
+            gridTemplateRows: `repeat(${this.numberOfRows}, 1fr)`,
             marginBottom: `150px`,
           }}
         >
@@ -88,7 +83,7 @@ export default class ProjectsPage extends React.Component {
     return (
       <Layout>
         <div className="music__main__wrapper">
-          <SEO title="Music" />
+          <SEO title="Projects" />
           <Spacer marginTop={100} />
           <SwitchTransition>
             <CSSTransition

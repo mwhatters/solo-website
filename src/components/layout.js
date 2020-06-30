@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Body from "../components/body"
 import Navbar from "../components/navbar"
+import Geometry from "../components/geometry"
 import { TransitionPortal } from "gatsby-plugin-transition-link";
 import "./layout.css"
 
@@ -32,7 +33,8 @@ const Layout = ({ children, alignment }) => {
           alignItems: alignment,
         }}
       >
-        <Body
+        <Body 
+          className="body__main-content"
           children={children} 
           siteTitle={data.site.siteMetadata.title} 
         />
