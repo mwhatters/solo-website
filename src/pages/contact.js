@@ -3,11 +3,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Spacer from "../components/util/spacer"
 import PatternInstance from "../components/patternInstance"
+import SocialMediaIcons from "../components/socialMediaIcons"
+
 
 
 const ContactPage = () => (
   <Layout>
-    <div className="about__main__wrapper">
+    <div className="contact__main__wrapper">
       <SEO title="Contact" />
       <Spacer marginTop={100} />
       <h2>Contact me</h2>
@@ -16,20 +18,20 @@ const ContactPage = () => (
         I'm looking for work in music, web / software development, and game design! 
         For inquiries, feel free to reach out at <a href="mailto:mwhatters@gmail.com">mwhatters@gmail.com</a>
       </div>
-      <Spacer marginTop={130} />
-      <div>
-        Social Media Links
-      </div>
-      <div>
-        CV
-      </div>
+      <Spacer marginTop={70} />
+      <SocialMediaIcons />
+      <Spacer marginTop={20} />
+      <em style={{ fontSize: 13 }}>
+        This page was made by myself using the react framework <a target="_blank" href="https://www.gatsbyjs.org/">Gatsby</a>
+      </em>
     </div>
+    <Spacer marginTop={40} />
     <div style={{ position: 'relative' }}>
-      <PatternInstance top={-100} left={-330} variation={2} animation="g1" />
-      <PatternInstance top={-655} left={300} variation={4} animation="g2" />
-      <PatternInstance top={-750} left={650} variation={7} animation="g3" />
-      <PatternInstance top={0} left={630} variation={6} animation="g2" />
-      <PatternInstance top={80} left={200} variation={5} animation="g-main" />
+      <PatternInstance top={-80} left={-330} variation={2} animation="g1" />
+      <PatternInstance top={-650} left={-230} variation={4} animation="g4" />
+      <PatternInstance top={20} left={450} variation={4} animation="g2" />
+      <PatternInstance top={-450} left={600} variation={2} animation="g5" />
+      <PatternInstance top={-300} left={-450} variation={3} animation="g6" />
     </div>
   </Layout>
 )

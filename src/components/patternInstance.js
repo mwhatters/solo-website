@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import "./geometry.css"
 
 
-const PatternInstance = ({ variation, left, right, top, bottom, position, animation }) => {
+const PatternInstance = ({ variation, left, right, top, bottom, position, opacity, animation }) => {
   
   function clean(obj) {
     for (var propName in obj) {
@@ -27,11 +27,11 @@ const PatternInstance = ({ variation, left, right, top, bottom, position, animat
     <div
       className={animation}
       style={{
-        position: position,
+        position,
         ...clean(styles)
       }}
     >
-      <TitleImage ordnum={variation} />
+      <TitleImage opacity={opacity} ordnum={variation} />
     </div>
   )
 }
@@ -49,6 +49,7 @@ PatternInstance.defaultProps = {
   bottom: null,
   animation: null,
   position: 'absolute',
+  opacity: 1,
 }
 
 export default PatternInstance

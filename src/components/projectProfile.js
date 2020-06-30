@@ -3,6 +3,7 @@ import ProjectImage from "../components/projectImage"
 import PropTypes from "prop-types"
 import Panel from "../components/panel"
 import Spacer from "../components/util/spacer"
+import { Link } from "gatsby"
 
 export default class ProjectProfile extends React.Component {
   constructor(props) {

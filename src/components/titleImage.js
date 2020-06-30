@@ -16,11 +16,15 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const TitleImage = ({ ordnum, main }) => {
+const TitleImage = ({ ordnum, main, opacity }) => {
 
   TitleImage.propTypes = {
     ordnum: PropTypes.number,
     main: PropTypes.bool,
+  }
+
+  TitleImage.defaultProps = {
+    opacity: 1,
   }
 
   const data = useStaticQuery(graphql`
@@ -97,7 +101,13 @@ const TitleImage = ({ ordnum, main }) => {
   }
 
   return (
-    <Img className={imgClass()} fixed={data[ordnumLookup].childImageSharp.fixed} />
+    <Img 
+      style={{
+        opacity,
+      }}
+      className={imgClass()} 
+      fixed={data[ordnumLookup].childImageSharp.fixed} 
+    />
   )
 }
 

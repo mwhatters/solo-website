@@ -72,12 +72,13 @@ const AboutPage = () => {
     <Layout>
       <SEO title="About" />
         <Panel
+          header="about me"
           imageContent={profileImageContent}
           content={profileContent}
         />
         <div style={{position: 'relative'}}>
           <PatternInstance top={-100} left={-330} variation={2} animation="g1" />
-          <PatternInstance top={-405} left={-80} variation={4} animation="g2" />
+          <PatternInstance top={-435} left={-80} variation={4} animation="g2" />
           <PatternInstance top={-750} left={-230} variation={5} animation="g-main" />
           <PatternInstance top={-270} left={-430} variation={3} animation="g3" />
           <PatternInstance top={0} left={630} variation={6} animation="g2" />

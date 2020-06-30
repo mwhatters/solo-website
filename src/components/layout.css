@@ -40,6 +40,11 @@
 
 /* MUSIC */
 
+.music__main__top {
+  position: relative;
+  top: -100px;
+}
+
 .music__main__wrapper {
   flex-direction: column;
   margin-bottom: 20px;
@@ -97,6 +102,8 @@
   padding-left: 20px;
   padding-right: 20px;
   z-index: 5;
+  position: relative;
+  bottom: 30px;
 }
 
 .about__profile__wrapper {
@@ -138,9 +145,9 @@
   box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
 
-.about__profile__info::-webkit-scrollbar-track {
+/* .about__profile__info::-webkit-scrollbar-track {
   background: beige; 
-}
+} */
 
 .about__profile__info::-webkit-scrollbar-corner {
   background: rgba(0,0,0,0);
@@ -148,9 +155,39 @@
 
 /* CONTACT */
 
+.contact__main__wrapper {
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 5;
+}
+
 .contact__main_info {
   width: 500px;
 }
+
+.contact__social_icons__row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+}
+
+.contact__social_icon__wrapper {
+  flex-grow: 1;
+}
+
+.contact__social_icon {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contact__social_icon:hover {
+  opacity: 0.7;
+}
+
 
 
 .fade-enter {
