@@ -54,7 +54,7 @@ export default class ProjectProfile extends React.Component {
               onClick={this.onBack}
             >
               ↓
-              <span style={{position: 'relative', top: '2px', marginLeft: '4px'}}>
+              <span style={{ position: 'relative', top: '2px', marginLeft: '4px', zIndex: 5}}>
                 Back to Grid
               </span>
             </div>

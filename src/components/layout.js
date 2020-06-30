@@ -10,11 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Body from "../components/body"
 import Navbar from "../components/navbar"
-import Geometry from "../components/geometry"
 import { TransitionPortal } from "gatsby-plugin-transition-link";
 import "./layout.css"
 
-const Layout = ({ children, alignment }) => {
+const Layout = ({ children, alignment, scrollEnabled }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,17 +27,18 @@ const Layout = ({ children, alignment }) => {
   return (
     <div>
       <div 
-        className="body__main-wrapper"
+        className={`body__main-wrapper ${scrollEnabled ? 'o__scroll' : ''}`}
         style={{
           alignItems: alignment,
         }}
       >
         <Body 
-          className="body__main-content"
+          className="body__main-content ${}"
           children={children} 
           siteTitle={data.site.siteMetadata.title} 
         />
       </div>
+      <div className="body__fake_footer"></div>
 
       <TransitionPortal>
         <div className="navbar__main-wrapper">
@@ -52,6 +52,11 @@ const Layout = ({ children, alignment }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   alignemnt: PropTypes.string,
+  scrollEnabled: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  scrollEnabled: false,
 }
 
 export default Layout

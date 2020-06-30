@@ -6,7 +6,13 @@ const Body = ({ children }) => {
     children: PropTypes.node.isRequired,
   }
 
-  return <>{children}</>
+  return (
+    <div>
+      <div className="body__main-content">
+        {children}
+      </div>
+    </div>
+  )
 }
 
 export default Body

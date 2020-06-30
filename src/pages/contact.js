@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Spacer from "../components/util/spacer"
+import PatternInstance from "../components/patternInstance"
+
 
 const ContactPage = () => (
   <Layout>
@@ -23,6 +23,13 @@ const ContactPage = () => (
       <div>
         CV
       </div>
+    </div>
+    <div style={{ position: 'relative' }}>
+      <PatternInstance top={-100} left={-330} variation={2} animation="g1" />
+      <PatternInstance top={-655} left={300} variation={4} animation="g2" />
+      <PatternInstance top={-750} left={650} variation={7} animation="g3" />
+      <PatternInstance top={0} left={630} variation={6} animation="g2" />
+      <PatternInstance top={80} left={200} variation={5} animation="g-main" />
     </div>
   </Layout>
 )

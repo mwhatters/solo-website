@@ -1,12 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Spacer from "../components/util/spacer"
 import ProjectProfile from "../components/projectProfile"
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import projects from '../lib/projects' 
+import PatternInstance from "../components/patternInstance"
+
+
+const numberOfRows = Math.ceil(Object.entries(projects).length / 3)
 
 export default class ProjectsPage extends React.Component {
   constructor(props) {
@@ -16,7 +18,6 @@ export default class ProjectsPage extends React.Component {
     }
   }
 
-  static numberOfRows = Math.ceil(Object.entries(projects).length / 3)
 
   highLightProject(projectKey) {
     this.setState({ highlightedProjectKey: projectKey })
@@ -59,30 +60,37 @@ export default class ProjectsPage extends React.Component {
     if (this.state.highlightedProjectKey) {
       let currentProject = projects[this.state.highlightedProjectKey];
       content = (
+        <>
           <ProjectProfile 
             project={currentProject}
             highlighted={true} 
             onBack={() => this.goToGrid()}
           />
+          <div className="music__post_wrapper"></div>
+        </>
       )
     } else {
       content = (
-        <div
-          className="music__grid"
-          style={{
-            gridTemplateColumns: `repeat(3, 1fr)`,
-            gridTemplateRows: `repeat(${this.numberOfRows}, 1fr)`,
-            marginBottom: `150px`,
-          }}
-        >
-          {this.generateProjectLinks()}
-        </div>
+        <>
+          <div
+            className="music__grid"
+            style={{
+              gridTemplateColumns: `repeat(3, 1fr)`,
+              gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
+            }}
+          >
+            {this.generateProjectLinks()}
+          </div>
+          <div className="music__post_wrapper"></div>
+        </>
       )
-    } 
+    }
 
     return (
-      <Layout>
-        <div className="music__main__wrapper">
+      <Layout scrollEnabled={true}>
+        <div 
+          className="music__main__wrapper"
+        >
           <SEO title="Projects" />
           <Spacer marginTop={100} />
           <SwitchTransition>
@@ -94,6 +102,13 @@ export default class ProjectsPage extends React.Component {
               {content}
             </CSSTransition>
           </SwitchTransition>
+          <div style={{ position: 'relative' }}>
+            <PatternInstance position='fixed' top={-240} left={-140} variation={6} animation="g3" />
+            <PatternInstance position='fixed' bottom={-240} left={-140} variation={7} animation="g2" />
+            <PatternInstance position='fixed' bottom={-240} right={-140} variation={6} animation="g2" />
+            <PatternInstance position='fixed' top={-240} right={-140} variation={7} animation="g3" />
+          </div>
+
         </div> 
       </Layout>
     )

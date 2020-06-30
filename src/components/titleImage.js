@@ -16,11 +16,11 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const TitleImage = ({ ordnum, visible }) => {
+const TitleImage = ({ ordnum, main }) => {
 
   TitleImage.propTypes = {
     ordnum: PropTypes.number,
-    visible: PropTypes.bool,
+    main: PropTypes.bool,
   }
 
   const data = useStaticQuery(graphql`
@@ -87,11 +87,13 @@ const TitleImage = ({ ordnum, visible }) => {
   let ordnumLookup = 'ord' + ordnum;
 
   function imgClass() {
-    if (visible) {
-      return "index__main-img index__main_visible"
+    let imgClass = "index__main-img "
+
+    if (main) {
+      imgClass += "g-main"
     }
 
-    return "index__main-img"
+    return imgClass
   }
 
   return (

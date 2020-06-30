@@ -1,11 +1,10 @@
-import { Link } from "gatsby"
 import Layout from "../components/layout"
+import PatternInstance from "../components/patternInstance"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 import React, { useState, setState } from "react"
 import TitleImage from "../components/titleImage"
 import { timeout } from "../lib/timeout"
-import storage from "../lib/storage"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -36,10 +35,14 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout alignment='center'>
+        <SEO title="Main" />
         <div className="index__main__wrapper">
-          <SEO title="Main" />
           <div className="index__image_stack">
-            <TitleImage visible={true} ordnum={8} />
+            <TitleImage main={true} ordnum={8} />
+            <PatternInstance left={350} variation={3} animation="g1"/>
+            <PatternInstance left={550} variation={2} animation="g2"/>
+            <PatternInstance left={-320} variation={3} animation="g1"/>
+            <PatternInstance left={-520} variation={2} animation="g2"/>
           </div>
 
           <div className="index__title index__title_visible">
