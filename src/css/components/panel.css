@@ -1,0 +1,53 @@
+.about__main__wrapper {
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 5;
+  position: relative;
+  bottom: 30px;
+}
+
+.about__profile__wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  position: relative;
+  overflow: auto;
+  z-index: 5;
+}
+
+.about__profile__info_wrapper {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  z-index: 5;
+}
+
+.about__profile__info {
+  flex-grow: 2;
+  font-size: 15px;
+  height: 400px;
+  width: 400px;
+  padding-right: 15px;
+  overflow: scroll;
+  position: relative;
+  display: block;
+  text-align: left;
+}
+
+.about__profile__info::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+.about__profile__info::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.about__profile__info::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}

@@ -1,0 +1,33 @@
+.index__main__wrapper {
+  flex-direction: column;
+}
+
+.index__title {
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0;
+}
+
+.index__title_visible {
+  opacity: 1 !important;
+  transition: opacity 4s ease-in-out;
+}
+
+.index__title_name {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.index__image_stack {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  position: relative;
+}
+
+.index__image__abs {
+  position: absolute;
+}
+
+.index__main-img {
+  margin: -10vh auto 0vh auto;
+}

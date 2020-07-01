@@ -8,7 +8,7 @@ const Body = ({ children }) => {
 
   return (
     <div>
-      <div className="body__main-content">
+      <div className="layout__main_content">
         {children}
       </div>
     </div>

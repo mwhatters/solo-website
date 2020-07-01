@@ -5,25 +5,26 @@ module.exports = {
     author: `@mwhatters`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-use-query-params`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography.js`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-transition-link`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-        layout: require.resolve(`./src/components/layout.js`)
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-use-query-params`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

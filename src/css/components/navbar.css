@@ -41,6 +41,24 @@
   color: rgb(105, 71, 71);
 }
 
+
+.navbar__menu__main {
+  width: 500px;
+}
+
 .navbar__link-selected {
   color: rgb(105, 71, 71);
+  border-bottom: 3px solid rgb(105, 71, 71);
+  animation-name: navbar-border;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes navbar-border {
+  from { 
+    border-bottom: 0px solid rgb(105, 71, 71);
+  }
+  to { 
+    border-bottom: 3px solid rgb(105, 71, 71);
+  }
 }

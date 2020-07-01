@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Body from "../components/body"
 import Navbar from "../components/navbar"
 import { TransitionPortal } from "gatsby-plugin-transition-link";
-import "./layout.css"
+import "../css/components/layout.css"
 
 const Layout = ({ children, alignment, scrollEnabled }) => {
   const data = useStaticQuery(graphql`
@@ -27,23 +27,19 @@ const Layout = ({ children, alignment, scrollEnabled }) => {
   return (
     <div>
       <div 
-        className={`body__main-wrapper ${scrollEnabled ? 'o__scroll' : ''}`}
-        style={{
-          alignItems: alignment,
-        }}
+        className={`layout__main_wrapper ${scrollEnabled ? 'o__scroll' : ''}`}
+        style={{ alignItems: alignment }}
       >
         <Body 
-          className="body__main-content ${}"
+          className="layout__main_content"
           children={children} 
           siteTitle={data.site.siteMetadata.title} 
         />
       </div>
-      <div className="body__fake_footer"></div>
+      <div className="layout__fake_footer"></div>
 
       <TransitionPortal>
-        <div className="navbar__main-wrapper">
-          <Navbar/>
-        </div>
+          <Navbar />
       </TransitionPortal>
     </div>
   )

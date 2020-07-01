@@ -1,7 +1,7 @@
 import React from "react"
 import TitleImage from "./titleImage"
 import PropTypes from "prop-types"
-import "./geometry.css"
+import "../css/components/patternInstance.css"
 
 
 const PatternInstance = ({ variation, left, right, top, bottom, position, opacity, animation }) => {

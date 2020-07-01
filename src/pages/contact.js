@@ -5,6 +5,8 @@ import Spacer from "../components/util/spacer"
 import PatternInstance from "../components/patternInstance"
 import SocialMediaIcons from "../components/socialMediaIcons"
 
+import "../css/pages/contact.css"
+
 
 
 const ContactPage = () => (

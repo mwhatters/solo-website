@@ -1,0 +1,77 @@
+
+.music__main__top {
+  position: relative;
+  top: -200px;
+}
+
+.music__main__wrapper {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.music__post_wrapper {
+  height: 40px;
+}
+
+.music__grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  position: relative;  
+  z-index: 5;
+}
+
+.project__profile_item {
+  display: block;
+  width: 265px;
+  height: 265px;
+  background-color: yellow;
+  transition: filter 0.4s ease;
+  border: 1px solid rgb(202, 202, 184);
+}
+
+.project__profile_item:hover {
+  filter: brightness(130%);
+  cursor: pointer;
+}
+
+.project__highlighted__wrapper {
+  flex: inherit;
+}
+
+.project__profile__back {
+  padding-left: 20px;
+  color: rgb(122, 122, 111);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.project__profile__back:hover {
+  color: rgb(59, 59, 54);
+}
+
+
+
+
+/* ANIMATIONS */
+
+.fade-enter {
+  opacity: 0;
+  /* transform: translateY(120%); */
+}
+.fade-enter-active {
+  opacity: 1;
+  /* transform: translateY(0%); */
+}
+.fade-exit {
+  opacity: 1;
+  /* transform: translateY(0%); */
+}
+.fade-exit-active {
+  opacity: 0;
+  /* transform: translateY(120%); */
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 500ms;
+}

@@ -1,15 +1,17 @@
+import React, { useState, useRef } from 'react';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import { useQueryParam, NumberParam, StringParam } from "use-query-params";
+import { timeout } from '../lib/timeout' 
+import queryString from 'query-string'
+import projects from '../lib/projects' 
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Spacer from "../components/util/spacer"
 import ProjectProfile from "../components/projectProfile"
-import { SwitchTransition, CSSTransition } from 'react-transition-group';
-import projects from '../lib/projects' 
-import { timeout } from '../lib/timeout' 
 import PatternInstance from "../components/patternInstance"
-import { useQueryParam, NumberParam, StringParam } from "use-query-params";
-import React, { useState, useEffect, useRef } from 'react';
-import smoothscroll from 'smoothscroll-polyfill';
-import queryString from 'query-string'
+
+import "../css/pages/projects.css"
 
 const ProjectsPage = () => {
   const [highlightedProjectKey, setHighlightedProjectKey] = useState(null);
@@ -18,31 +20,27 @@ const ProjectsPage = () => {
   const numberOfRows = Math.ceil(Object.entries(projects).length / 3)
 
   const projectQueryParamsPresent = () => {
+    return currentProject() ? true : false;
+  }
+
+  const currentProject = () => {
     let url = new URL(window.location)
     let parsed = queryString.parse(url.search)
-    let currentProject = parsed.project
-    if (currentProject) {
-      setHighlightedProjectKey(currentProject)
-      return true;
-    }
-
-    return false;
+    return parsed.project
   }
 
   const scrollToTop = () => {
-    scrollEl.current.scrollIntoView({ behavior: "auto" })
+    scrollEl.current.scrollIntoView({ behavior: "smooth" })
   }
 
   const highlightProject = async function(projectKey) {
     scrollToTop()
-    setProjectParam(projectKey)
     await timeout(500)
-    setHighlightedProjectKey(projectKey)
+    setProjectParam(projectKey)
   }
 
   const returnToGrid = () => {
     setProjectParam(undefined)
-    setHighlightedProjectKey(null)
   }
 
   const generateProjectLinks = () => {
@@ -72,12 +70,12 @@ const ProjectsPage = () => {
   }
 
   const generateContent = () => {
-    if (highlightedProjectKey || projectQueryParamsPresent()) {
-      let currentProject = projects[highlightedProjectKey]
+    if (projectQueryParamsPresent()) {
+      let fullProject = projects[currentProject()]
       return (
         <>
           <ProjectProfile
-            project={currentProject}
+            project={fullProject}
             highlighted={true}
             onBack={() => returnToGrid()}
           />
@@ -106,7 +104,7 @@ const ProjectsPage = () => {
     return (
       <SwitchTransition>
         <CSSTransition
-          key={highlightedProjectKey}
+          key={projectQueryParamsPresent()}
           addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
           classNames='fade'
         >
@@ -128,7 +126,7 @@ const ProjectsPage = () => {
     return (
       <SwitchTransition>
         <CSSTransition
-          key={highlightedProjectKey}
+          key={projectQueryParamsPresent()}
           addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
           classNames='fade'
         >
@@ -139,7 +137,7 @@ const ProjectsPage = () => {
   }
 
   return (
-    <Layout scrollEnabled={!highlightedProjectKey}>
+    <Layout scrollEnabled={!currentProject()}>
       <div ref={scrollEl} className="music__main__top" />
       <div className="music__main__wrapper">
         <SEO title="Projects" />

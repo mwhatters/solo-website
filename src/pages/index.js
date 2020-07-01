@@ -6,6 +6,8 @@ import React, { useState, setState } from "react"
 import TitleImage from "../components/titleImage"
 import { timeout } from "../lib/timeout"
 
+import "../css/pages/index.css"
+
 export default class IndexPage extends React.Component {
   constructor(props) {
     super(props);

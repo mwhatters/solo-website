@@ -1,31 +1,25 @@
 import React from "react"
-import "./navbar.css"
+import "../css/components/navbar.css"
 import PropTypes from "prop-types"
 
-export default class NavbarBorder extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  static propTypes = {
-    width: PropTypes.string.isRequired,
-    offset: PropTypes.string.isRequired,
-  }
-
-  static defaultProps = {
-    width: `40px`,
-    offset: `40px`,
-  }
-
-  render() {
-    return (
-      <div 
+const NavbarBorder = ({ children, width, offset }) => {
+  return (
+    <div style={{width: '100%'}}>
+      <div
         className="navbar__links__bottom_border"
         style={{
-          width: this.props.width,
-          left: this.props.offset,
+          width: width,
+          left: offset,
         }}
       />
-    )
-  }
+    </div>
+  )
 }
+
+NavbarBorder.propTypes = {
+  children: PropTypes.node,
+  width: PropTypes.string,
+  offset: PropTypes.string,
+}
+
+export default NavbarBorder

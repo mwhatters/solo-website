@@ -1,0 +1,32 @@
+.contact__main__wrapper {
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 5;
+}
+
+.contact__main_info {
+  width: 500px;
+}
+
+.contact__social_icons__row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+}
+
+.contact__social_icon__wrapper {
+  flex-grow: 1;
+}
+
+.contact__social_icon {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contact__social_icon:hover {
+  opacity: 0.7;
+}

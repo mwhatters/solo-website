@@ -1,6 +1,8 @@
 import PropTypes from "prop-types"
 import React, { useState, setState } from "react"
 import Spacer from "../components/util/spacer"
+import "../css/components/panel.css"
+
 
 const Panel = ({ children, imageContent, content, header }) => {
   Panel.propTypes = {

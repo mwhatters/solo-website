@@ -7,10 +7,6 @@ import Img from "gatsby-image"
 import Spacer from "../components/util/spacer"
 import PatternInstance from "../components/patternInstance"
 
-
-
-
-
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
     query {
