@@ -16,7 +16,7 @@ const Layout = ({ children, alignment, scrollEnabled }) => {
       }
     }
   `)
-
+  
   return (
     <div>
         <div 
@@ -32,7 +32,7 @@ const Layout = ({ children, alignment, scrollEnabled }) => {
         <TransitionPortal>
             <Navbar />
         </TransitionPortal>
-      </div>
+    </div>
   )
 }
 

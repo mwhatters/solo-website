@@ -8,7 +8,6 @@
   max-width: 800px;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 5;
   position: relative;
   bottom: 30px;
 }
@@ -17,16 +16,12 @@
   display: flex;
   flex-direction: row;
   max-width: 800px;
-  position: relative;
   overflow: auto;
-  z-index: 5;
 }
 
 .panel__profile__info_wrapper {
   height: 400px;
   width: 400px;
-  position: relative;
-  z-index: 5;
 }
 
 .panel__profile__info {
@@ -36,7 +31,6 @@
   width: 400px;
   padding-right: 15px;
   overflow: scroll;
-  position: relative;
   display: block;
   text-align: left;
 }

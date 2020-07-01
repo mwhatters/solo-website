@@ -2,8 +2,6 @@
   max-width: 800px;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 5;
-
 }
 
 .contact__main_info {
@@ -19,9 +17,7 @@
 .contact__social_icons__row {
   display: flex;
   flex-direction: row;
-  position: relative;
   justify-content: center;
-  z-index: 5;
 }
 
 .contact__social_icon__wrapper {

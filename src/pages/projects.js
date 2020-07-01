@@ -96,8 +96,8 @@ const ProjectsPage = ({ isMobile }) => {
             <PatternInstance opacity={0.2} top={150} left={-400} variation={3} animation="g5" />
             <PatternInstance opacity={0.2} top={0} right={-400} variation={2} animation="g6" />
             <PatternInstance opacity={0.2} top={400} left={-150} variation={5} animation="g1" />
-            <PatternInstance opacity={0.2} bottom={0} right={-150} variation={7} animation="g2" />
-            <PatternInstance opacity={0.2} bottom={-600} right={-150} variation={4} animation="g-main" />
+            <PatternInstance opacity={0.2} bottom={-10} right={-130} variation={7} animation="g2" />
+            <PatternInstance opacity={0.2} bottom={-640} right={-200} variation={4} animation="g-main" />
             <PatternInstance opacity={0.2} bottom={-1000} right={100} variation={8} animation="g4" />
           </div>
         </CSSTransition>

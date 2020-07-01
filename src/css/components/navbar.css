@@ -11,12 +11,10 @@
   height: 10vh;
   min-height: 60px;
   background: rgb(214, 214, 193);
-  z-index: 0;
 }
 
 .navbar__links__bottom_border {
   display: block;
-  position: relative;
   border-bottom: 3px solid rgb(105, 71, 71);
   transition: border-bottom 0.3s ease;
   transition: width 1s ease;

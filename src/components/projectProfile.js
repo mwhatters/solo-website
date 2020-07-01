@@ -44,7 +44,7 @@ const ProjectProfile = ({ project, highlighted, onBack }) => {
             onClick={goBack}
           >
             ↓
-            <span style={{ position: 'relative', top: '2px', marginLeft: '4px', zIndex: 5 }}>
+            <span style={{ position: 'relative', top: '2px', marginLeft: '4px' }}>
               Back to Grid
             </span>
           </div>

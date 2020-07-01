@@ -1,8 +1,9 @@
 .body__main_content {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 .o__scroll {
@@ -12,3 +13,8 @@
 a {
   color: rgb(122, 122, 111);
 }
+
+a:hover {
+  color: rgb(75, 75, 68);
+}
+
