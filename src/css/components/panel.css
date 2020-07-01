@@ -59,6 +59,10 @@
 /* MOBILE */
 
 .panel__mobile__wrapper {
+  height: 90vh;
+}
+
+.panel__mobile__content {
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -8,15 +8,17 @@ const Panel = ({ imageContent, content, header, isMobile }) => {
 
   const mobileDisplay = (
     <div className="panel__mobile__wrapper">
-      {header ? <h1>{header}</h1> : null}
-      {imageContent &&
-        <>
-          {imageContent}
-          <Spacer marginTop={60} />
-        </>
-      }
-      {content}
-      <Spacer marginTop={60} />
+      <div className="panel__mobile__content">
+        {header ? <h1>{header}</h1> : null}
+        {imageContent &&
+          <>
+            {imageContent}
+            <Spacer marginTop={60} />
+          </>
+        }
+        {content}
+        <Spacer marginTop={60} />
+      </div>
     </div>
   )
   
