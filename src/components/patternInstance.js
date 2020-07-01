@@ -3,16 +3,13 @@ import TitleImage from "./titleImage"
 import PropTypes from "prop-types"
 import "../css/components/patternInstance.css"
 
-
 const PatternInstance = ({ variation, left, right, top, bottom, position, opacity, animation }) => {
-  
-  function clean(obj) {
+  const clean = (obj) => {
     for (var propName in obj) {
       if (obj[propName] === null || obj[propName] === undefined) {
         delete obj[propName];
       }
     }
-
     return obj
   }
 

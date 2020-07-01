@@ -4,6 +4,7 @@ import { useQueryParam, NumberParam, StringParam } from "use-query-params";
 import { timeout } from '../lib/timeout' 
 import queryString from 'query-string'
 import projects from '../lib/projects' 
+import "../css/pages/projects.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,10 +12,7 @@ import Spacer from "../components/util/spacer"
 import ProjectProfile from "../components/projectProfile"
 import PatternInstance from "../components/patternInstance"
 
-import "../css/pages/projects.css"
-
 const ProjectsPage = () => {
-  const [highlightedProjectKey, setHighlightedProjectKey] = useState(null);
   const [project, setProjectParam] = useQueryParam('project', StringParam);
   const scrollEl = useRef(null);
   const numberOfRows = Math.ceil(Object.entries(projects).length / 3)

@@ -2,6 +2,8 @@ import React from "react"
 import "../css/components/navbar.css"
 import PropTypes from "prop-types"
 
+// Unused at this time
+
 const NavbarBorder = ({ children, width, offset }) => {
   return (
     <div style={{width: '100%'}}>

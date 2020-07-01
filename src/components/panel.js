@@ -3,15 +3,7 @@ import React, { useState, setState } from "react"
 import Spacer from "../components/util/spacer"
 import "../css/components/panel.css"
 
-
-const Panel = ({ children, imageContent, content, header }) => {
-  Panel.propTypes = {
-    children: PropTypes.node,
-    imageContent: PropTypes.element,
-    content: PropTypes.element,
-    header: PropTypes.string,
-  }
-
+const Panel = ({ imageContent, content, header }) => {
   return (
     <div className="about__main__wrapper">
       <Spacer marginTop={130} />
@@ -28,6 +20,12 @@ const Panel = ({ children, imageContent, content, header }) => {
       </div>
     </div>
   )
+}
+
+Panel.propTypes = {
+  imageContent: PropTypes.element,
+  content: PropTypes.element,
+  header: PropTypes.string,
 }
 
 export default Panel
