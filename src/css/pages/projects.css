@@ -1,24 +1,41 @@
 
-.music__main__top {
+.projects__main__top {
   position: relative;
   top: -200px;
 }
 
 .music__main__wrapper {
-  flex-direction: column;
+  height: 80vh;
   margin-bottom: 20px;
 }
 
-.music__post_wrapper {
+.projects__post_wrapper {
   height: 40px;
 }
 
-.music__grid {
+.projects__grid__wrapper {
+  height: 100%;
+}
+
+.projects__grid {
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   position: relative;  
   z-index: 5;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 850px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .projects__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .project__profile_item {
@@ -44,6 +61,8 @@
   color: rgb(122, 122, 111);
   cursor: pointer;
   display: inline-block;
+  position: relative;
+  bottom: 45px;
 }
 
 .project__profile__back:hover {

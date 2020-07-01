@@ -1,5 +1,7 @@
-.geometry__container {
-  position: fixed;
+.pattern_instance_container {
+  height: 90vh;
+  overflow: hidden;
+  z-index: 5;
 }
 
 .g-main {

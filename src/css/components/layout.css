@@ -8,10 +8,17 @@
 .layout__main_wrapper {
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-content: center;
   overflow: hidden;
   width: 100%;
   height: 90vh;
   background: beige;
+}
+
+
+@media screen and (max-width: 850px) {
+  .layout__main_wrapper {
+    overflow-y: scroll;
+  }
 }

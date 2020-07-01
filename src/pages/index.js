@@ -11,7 +11,7 @@ const IndexPage = () => {
   return (
     <Layout alignment='center'>
       <SEO title="Main" />
-      <div className="index__main__wrapper">
+      <div>
         <div className="index__image_stack">
           <TitleImage main={true} ordnum={8} />
           <PatternInstance left={350} variation={3} animation="g1" />

@@ -3,7 +3,7 @@
   bottom: 0vh;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-content: center;
   align-items: center;
   overflow: hidden;
@@ -34,16 +34,10 @@
   text-decoration: none;
   color: black;
   transition: color 0.3s ease-in-out;
-  /* transition: border-bottom 0.3s ease-in-out; */
 }
 
 .navbar__link:hover {
   color: rgb(105, 71, 71);
-}
-
-
-.navbar__menu__main {
-  width: 500px;
 }
 
 .navbar__link-selected {
