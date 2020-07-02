@@ -26,8 +26,12 @@ const ProjectsPage = ({ isMobile }) => {
     return currentProject() ? true : false;
   }
 
+  const windowIsDefined = () => {
+    return typeof window !== 'undefined'
+  }
+
   const currentProject = () => {
-    if (!window) { return; }
+    if (!windowIsDefined()) { return; }
     let url = new URL(window.location)
     let parsed = queryString.parse(url.search)
     if (projects[parsed.project]) {
@@ -109,7 +113,7 @@ const ProjectsPage = ({ isMobile }) => {
   }
 
   const leavingProjectsPages = () => {
-    if (!window) { return; }
+    if (!windowIsDefined()) { return; }
     return !window.location.href.match('projects')
   }
 
