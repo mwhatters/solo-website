@@ -9,7 +9,6 @@ import withSizes from 'react-sizes'
 import "../css/pages/contact.css"
 
 const ContactPage = ({ isMobile }) => {
-
   const contactContent = (
     <>
       {isMobile && <Spacer marginTop={40} />}
@@ -32,22 +31,26 @@ const ContactPage = ({ isMobile }) => {
 
   const bgImageOpacity = () => { return isMobile ? 0.2 : 1 }
 
+  const backgroundContent = () => (
+    <div style={{ position: 'relative' }}>
+      <PatternInstance opacity={bgImageOpacity()} top={-650} left={-230} variation={4} animation="g4" />
+      <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -400 : -180} left={isMobile ? 200 : 320} variation={5} animation="g2" />
+      {!isMobile &&
+        <>
+          <PatternInstance top={-450} left={600} variation={2} animation="g5" />
+          <PatternInstance top={-350} left={-450} variation={3} animation="g6" />
+          <PatternInstance top={-150} left={-330} variation={2} animation="g1" />
+        </>
+      }
+    </div>
+  )
+
   return (
     <Layout>
       <SEO title="Contact" />
       <div>
         <Panel content={contactContent}/>
-        <div style={{ position: 'relative' }}>
-          <PatternInstance opacity={bgImageOpacity()} top={-650} left={-230} variation={4} animation="g4" />
-          <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -400 : -180} left={isMobile ? 200 : 320} variation={5} animation="g2" />
-          {!isMobile && 
-            <>
-              <PatternInstance top={-450} left={600} variation={2} animation="g5" />
-              <PatternInstance top={-350} left={-450} variation={3} animation="g6" />
-              <PatternInstance top={-150} left={-330} variation={2} animation="g1" />
-            </>
-          }
-        </div>
+        {backgroundContent()}
       </div>
     </Layout>
   )

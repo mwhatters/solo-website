@@ -16,10 +16,13 @@ import withSizes from 'react-sizes'
 const ProjectsPage = ({ isMobile }) => {
   const [project, setProjectParam] = useQueryParam('project', StringParam);
   const [exitingPage, setExitingPage] = useState(false)
-  const scrollEl = useRef(null);
-  const numberOfRows = Math.ceil(Object.entries(projects).length / 3)
+  const anchor = useRef(null);
 
-  const projectQueryParamsPresent = () => {
+  const scrollToTop = () => {
+    anchor.current.scrollIntoView({ behavior: "auto" })
+  }
+
+  const projectIsHighlighted = () => {
     return currentProject() ? true : false;
   }
 
@@ -29,10 +32,6 @@ const ProjectsPage = ({ isMobile }) => {
     if (projects[parsed.project]) {
       return parsed.project
     }
-  }
-
-  const scrollToTop = () => {
-    scrollEl.current.scrollIntoView({ behavior: "auto" })
   }
 
   const highlightProject = (projectKey) => {
@@ -61,7 +60,7 @@ const ProjectsPage = ({ isMobile }) => {
   }
 
   const generateContent = () => {
-    if (projectQueryParamsPresent()) {
+    if (projectIsHighlighted()) {
       let fullProject = projects[currentProject()]
       return (
         <>
@@ -90,7 +89,7 @@ const ProjectsPage = ({ isMobile }) => {
     return (
       <SwitchTransition mode="out-in">
         <CSSTransition
-          key={projectQueryParamsPresent()}
+          key={projectIsHighlighted()}
           addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
           classNames='fade'
         >
@@ -112,7 +111,7 @@ const ProjectsPage = ({ isMobile }) => {
     return (
       <SwitchTransition mode="out-in">
         <CSSTransition
-          key={projectQueryParamsPresent()}
+          key={projectIsHighlighted()}
           addEndListener={(node, done) => {
             let enteringNewPage = node.className.match("fade-enter-active");
             let leavingProjectsPages = !window.location.href.match('projects')
@@ -130,7 +129,7 @@ const ProjectsPage = ({ isMobile }) => {
 
   return (
     <Layout scrollEnabled={!currentProject()}>
-      <div ref={scrollEl} className="projects__main__top" />
+      <div ref={anchor} className="projects__main__top" />
         <SEO title="Projects" />
         <Spacer marginTop={isMobile ? 0 : 50} />
         {!exitingPage && 
