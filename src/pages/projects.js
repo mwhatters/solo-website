@@ -27,6 +27,7 @@ const ProjectsPage = ({ isMobile }) => {
   }
 
   const currentProject = () => {
+    if (!window) { return; }
     let url = new URL(window.location)
     let parsed = queryString.parse(url.search)
     if (projects[parsed.project]) {
@@ -107,6 +108,11 @@ const ProjectsPage = ({ isMobile }) => {
     )
   }
 
+  const leavingProjectsPages = () => {
+    if (!window) { return; }
+    return !window.location.href.match('projects')
+  }
+
   const foregroundContent = () => {
     return (
       <SwitchTransition mode="out-in">
@@ -114,9 +120,8 @@ const ProjectsPage = ({ isMobile }) => {
           key={projectIsHighlighted()}
           addEndListener={(node, done) => {
             let enteringNewPage = node.className.match("fade-enter-active");
-            let leavingProjectsPages = !window.location.href.match('projects')
             if (enteringNewPage) { scrollToTop() }
-            if (enteringNewPage && leavingProjectsPages) { setExitingPage(true) }
+            if (enteringNewPage && leavingProjectsPages()) { setExitingPage(true) }
             node.addEventListener("transitionend", done, false)
           }}
           classNames='fade'
