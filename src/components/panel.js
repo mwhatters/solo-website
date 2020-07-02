@@ -4,20 +4,18 @@ import Spacer from "../components/util/spacer"
 import "../css/components/panel.css"
 import withSizes from 'react-sizes'
 
-const Panel = ({ imageContent, content, header, isMobile }) => {
+const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
 
   const mobileDisplay = (
     <div className="panel__mobile__wrapper">
       <div className="panel__mobile__content">
-        {header ? <h1>{header}</h1> : null}
-        {imageContent &&
-          <>
-            {imageContent}
-            <Spacer marginTop={60} />
-          </>
-        }
+        {header && <h1>{header}</h1>}
+        {imageContent && <>{imageContent}</>}
+        {backButton && <>{backButton}</>}
+        <Spacer marginTop={40} />
         {content}
-        <Spacer marginTop={60} />
+        <Spacer marginTop={10} />
+        {backButton && <>{backButton}</>}
       </div>
     </div>
   )
@@ -40,6 +38,7 @@ const Panel = ({ imageContent, content, header, isMobile }) => {
           </div>
         </div>
       </div>
+      {backButton && <>{backButton}</>}
     </div>
   )
 
@@ -57,6 +56,7 @@ Panel.propTypes = {
   imageContent: PropTypes.element,
   content: PropTypes.element,
   header: PropTypes.string,
+  backButton: PropTypes.element,
 }
 
 const mapSizesToProps = ({ width }) => ({

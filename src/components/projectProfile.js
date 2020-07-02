@@ -38,16 +38,13 @@ const ProjectProfile = ({ project, highlighted, onBack }) => {
             header={project.name}
             imageContent={projectImage}
             content={project.writtenContent}
+            backButton={(
+              <div className="project__profile__back" onClick={goBack}>
+                Return to Grid
+              </div>
+            )}
           />
-          <div
-            className="project__profile__back"
-            onClick={goBack}
-          >
-            ↓
-            <span style={{ position: 'relative', top: '2px', marginLeft: '4px' }}>
-              Back to Grid
-            </span>
-          </div>
+
         </div>
       )
     }

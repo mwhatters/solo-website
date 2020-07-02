@@ -55,16 +55,15 @@
 }
 
 .project__profile__back {
-  padding-left: 20px;
-  color: rgb(122, 122, 111);
+  color: rgb(87, 71, 58);
   cursor: pointer;
-  display: inline-block;
+  display: block;
   position: relative;
-  bottom: 45px;
+  font-weight: 500;
 }
 
 .project__profile__back:hover {
-  color: rgb(59, 59, 54);
+  color: rgb(94, 54, 31);
 }
 
 

@@ -61,7 +61,9 @@ const projects = {
     ),
     writtenContent: (
       <div>
-        This is a sample song from work I did for a community modding collaboration for the game <a target="_blank" href="http://www.celestegame.com/">Celeste</a>
+        This is a sample song from work I did for a community modding collaboration for the game <a target="_blank" href="http://www.celestegame.com/">Celeste</a>.
+        In this collaboration I contributed over 10 original songs, with dynamic layering included. I also designed a short level for the project. The full set of songs I composed
+        will be available once the project is made publically available.
       </div>
     ),
   },
@@ -80,14 +82,47 @@ const projects = {
         <a href="http://brookspark.bandcamp.com/album/stranger-nights-nothing-left-to-lose">Stranger Nights • Nothing Left To Lose by Brooks Park</a>
       </iframe>
     ),
+    writtenContent: (
+      <div>
+        <p>
+          Brooks Park is a solo project created last year shortly after leaving Intercom. Inspired by lofi and DIY bands such as Dr Dog, Still Woozy, and Unknown Mortal Orchestra,
+          Brooks Park features self-produced vocals, composition, instrumentation, and mixing. Drumming in the two tracks here were performed by Evan Kaiser. Thanks to Danielle Goldsmith for drum mixing assistance
+          and James Meder of Pique Recording for mastering.
+        </p>
+        <p>
+          It's been some time since I've worked on this project but I intend to keep producing music in this style. 
+          The music can be found on Spotify and all major streaming platforms.
+        </p>
+      </div>
+    ),
   },
   luna: {
     name: 'Luna',
     imageKey: 'luna',
     writtenContent: (
-      <em>
-        Find the game available on Steam <a target="_blank" href="https://store.steampowered.com/app/666810/Luna/">here</a>
-      </em>
+      <div>
+        <p>
+          <a target="_blank" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
+        </p>
+        <p>
+          <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
+        </p>
+        <p>
+          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna, 
+          who much overcome their creator and defeat his powerful minions. The game is built around the concept of being able to rotate the world in which you are moving through, 
+          thus affecting the gravity of the player and surrounding objects.
+          It was released in August of 2017 and was my first attempt at designing a video game from scratch.
+          Given my limitations on both a technical and visual level, I'm ultiamtely proud of this effort. 
+        </p>
+        <div>
+          <p>
+            <strong>Original Trailer</strong>
+          </p>
+          <iframe width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br></br>
+          <br></br>
+        </div>
+      </div>
     ),
   },
   ontothemoon: {
@@ -105,10 +140,34 @@ const projects = {
         <a href="http://vespersails.bandcamp.com/album/on-to-the-moon">On to the Moon by Vesper Sails</a>
       </iframe>
     ),
+    writtenContent: (
+      <div>
+        <p>
+          On To the Moon is the second feature-length album by my former band <b>Vesper Sails</b>. 
+          It features Ian Harshman on lead guitar, David Adamiak on bass, 
+          Evan Kaiser on drums, and myself on vocals, rhythm guitar, 
+          keys, and (occasionally) saxaphone.
+        </p>
+        <p>
+          This is likely Vesper Sail's last effort as a band, 
+          for both Ian and myself have moved to different parts of the country to pursue different things. That being said,
+          the four of us remain good friends to this day.
+        </p>
+      </div>
+    ),
   },
   sib: {
     name: 'Sib',
-    imageKey: 'sib'
+    imageKey: 'sib',
+    writtenContent: (
+      <div>
+        <p>
+          <a target="_blank" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
+          <a target="_blank" href="https://youtu.be/k7FpchG9slQ">Playthrough of the mod</a>
+        </p>
+        Sib
+      </div>
+    ),
   },
   cheshireking: {
     name: 'Cheshire King',

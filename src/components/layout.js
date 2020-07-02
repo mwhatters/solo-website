@@ -5,8 +5,9 @@ import Body from "../components/body"
 import Navbar from "../components/navbar"
 import { TransitionPortal } from "gatsby-plugin-transition-link";
 import "../css/components/layout.css"
+import withSizes from 'react-sizes'
 
-const Layout = ({ children, alignment, scrollEnabled }) => {
+const Layout = ({ children, alignment, scrollEnabled, isShortScreen }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,7 +21,7 @@ const Layout = ({ children, alignment, scrollEnabled }) => {
   return (
     <div>
         <div 
-          className={`layout__main_wrapper ${scrollEnabled ? 'o__scroll' : ''}`}
+          className={`layout__main_wrapper ${scrollEnabled || isShortScreen ? 'o__scroll' : ''}`}
           style={{ alignItems: alignment }}
           >
           <Body 
@@ -46,4 +47,8 @@ Layout.defaultProps = {
   scrollEnabled: false,
 }
 
-export default Layout
+const mapSizesToProps = ({ height }) => ({
+  isShortScreen: height < 640,
+})
+
+export default withSizes(mapSizesToProps)(Layout)
