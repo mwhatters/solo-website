@@ -44,8 +44,7 @@ const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
   )
 
   const display = () => {
-    if (isMobile) { return mobileDisplay }
-    return desktopDisplay
+    return isMobile ? mobileDisplay : desktopDisplay
   }
 
   return (

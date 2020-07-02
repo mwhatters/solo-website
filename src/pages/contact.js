@@ -6,12 +6,7 @@ import PatternInstance from "../components/patternInstance"
 import SocialMediaIcons from "../components/socialMediaIcons"
 import Panel from "../components/panel"
 import withSizes from 'react-sizes'
-
-
 import "../css/pages/contact.css"
-
-
-
 
 const ContactPage = ({ isMobile }) => {
 
@@ -54,8 +49,6 @@ const ContactPage = ({ isMobile }) => {
           }
         </div>
       </div>
-
-        
     </Layout>
   )
 }

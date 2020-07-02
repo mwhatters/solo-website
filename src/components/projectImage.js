@@ -28,7 +28,7 @@ const ProjectImage = ({ projectKey, parentStyle }) => {
     )
   }
 
-  return (<div />)
+  return (<div/>)
 }
 
 ProjectImage.propTypes = {

@@ -35,7 +35,7 @@ const ProjectsPage = ({ isMobile }) => {
     scrollEl.current.scrollIntoView({ behavior: "auto" })
   }
 
-  const highlightProject = async function(projectKey) {
+  const highlightProject = (projectKey) => {
     setProjectParam(projectKey)
   }
 

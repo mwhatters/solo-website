@@ -5,30 +5,25 @@ import Panel from "../components/panel"
 
 
 const ProjectProfile = ({ project, highlighted, onBack }) => {
-  const goBack = () => {
-    onBack()
-  }
-
-  const generateProfileImage = () => {
-    if (!project) {
-      return (
-        <div />
-      )
+  const fetchProjectImageContent = () => {
+    if (project.imageContent) {
+      return project.imageContent
     }
 
-    let projectImage;
-    if (project.imageContent) {
-      projectImage = project.imageContent
-    } else {
-      projectImage = (
-        <ProjectImage
-          projectKey={project.imageKey}
-          parentStyle={{
-            width: `270px`,
-            height: `270px`,
-          }}
-        />
-      )
+    return (
+      <ProjectImage
+        projectKey={project.imageKey}
+        parentStyle={{
+          width: `270px`,
+          height: `270px`,
+        }}
+      />
+    )
+  }
+
+  const generateProjectProfile = () => {
+    if (!project) {
+      return (<div/>)
     }
 
     if (highlighted) {
@@ -36,15 +31,14 @@ const ProjectProfile = ({ project, highlighted, onBack }) => {
         <div>
           <Panel
             header={project.name}
-            imageContent={projectImage}
+            imageContent={fetchProjectImageContent()}
             content={project.writtenContent}
             backButton={(
-              <div className="project__profile__back" onClick={goBack}>
+              <div className="project__profile__back" onClick={onBack}>
                 Return to Grid
               </div>
             )}
           />
-
         </div>
       )
     }
@@ -56,7 +50,7 @@ const ProjectProfile = ({ project, highlighted, onBack }) => {
     )
   }
 
-  return generateProfileImage()
+  return generateProjectProfile()
 }
 
 ProjectProfile.propTypes = {
