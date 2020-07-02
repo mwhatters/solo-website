@@ -44,12 +44,12 @@ const ContactPage = ({ isMobile }) => {
         <Panel content={contactContent}/>
         <div style={{ position: 'relative' }}>
           <PatternInstance opacity={bgImageOpacity()} top={-650} left={-230} variation={4} animation="g4" />
-          <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -400 : 20} left={isMobile ? 200 : 450} variation={4} animation="g2" />
+          <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -400 : -180} left={isMobile ? 200 : 320} variation={5} animation="g2" />
           {!isMobile && 
             <>
               <PatternInstance top={-450} left={600} variation={2} animation="g5" />
-              <PatternInstance top={-300} left={-450} variation={3} animation="g6" />
-              <PatternInstance top={-80} left={-330} variation={2} animation="g1" />
+              <PatternInstance top={-350} left={-450} variation={3} animation="g6" />
+              <PatternInstance top={-150} left={-330} variation={2} animation="g1" />
             </>
           }
         </div>

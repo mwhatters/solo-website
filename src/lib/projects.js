@@ -165,7 +165,14 @@ const projects = {
           <a target="_blank" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
           <a target="_blank" href="https://youtu.be/k7FpchG9slQ">Playthrough of the mod</a>
         </p>
-        Sib
+        <p>
+          Sib is the first mod I made for the game <a target="_blank" href="http://www.celestegame.com/">Celeste</a> and is noticably less polished
+          than its successor, <a href="./?project=glyph">Glyph</a>. It is still fondly enjoyed by the community, however.
+        </p>
+        <p>
+          The project features a 12-minute soundtrack I composed myself. You can listen to it <a target="_blank" href="https://soundcloud.com/lushboy-studios/sets/sib-the-crane-soundtrack">on Soundcloud</a>
+        </p>
+
       </div>
     ),
   },
@@ -184,6 +191,19 @@ const projects = {
         <a href="http://vespersails.bandcamp.com/album/cheshire-king">Cheshire King by Vesper Sails</a>
       </iframe>
     ),
+    writtenContent: (
+      <div>
+        <p>
+          Cheshire Kind is the first full-length feature album by my old band <b>Vesper Sails</b>.
+          It features Ian Harshman on lead guitar, David Adamiak on bass,
+          Evan Kaiser on drums, and myself on vocals, rhythm guitar,
+          keys, and (occasionally) saxaphone.
+        </p>
+        <p>
+          The recording engineer for this album was James Meder, who also mixed the tracks.
+        </p>
+      </div>
+    ),
   },
   intosilence: {
     name: 'Into Silence',
@@ -196,6 +216,18 @@ const projects = {
         allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/457891092&color=%2394745c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
       </iframe>
+    ),
+    writtenContent: (
+      <div>
+        <p>
+          Into Silence is an individual track I did some time ago. 
+          The entirety of the track was made within a week, and release a few days after that.
+          It features a 5/4 polyrhythm that persists through the track, a rhythm that I was very fond of
+          at the time.
+
+          All instrumentation, mixing and mastering, and artwork done by myself.
+        </p>
+      </div>
     ),
   },
   aloud: {
@@ -212,6 +244,14 @@ const projects = {
         <a href="http://thedukeandthedauphin.bandcamp.com/track/aloud">Aloud by The Duke And The Dauphin</a>
       </iframe>
     ),
+    writtenContent: (
+      <div>
+        <p>
+          Aloud is a song by an old folk project of mine called <a target="_blank" href="http://thedukeandthedauphin.bandcamp.com">The Duke And The Dauphin</a>,
+          a duo consisting of me doing the music, and my friend Jeffrey Mull writing the words. This is a remake of a demo recorded back in 2012.
+        </p>
+      </div>
+    ),
   },
   onisolation: {
     name: 'On Isolation',
@@ -227,6 +267,17 @@ const projects = {
         seamless>
         <a href="http://thedukeandthedauphin.bandcamp.com/album/on-isolation">On Isolation by The Duke And The Dauphin</a>
       </iframe>
+    ),
+    writtenContent: (
+      <div>
+        <p>
+          On Isolation is the last album of an old folk project of mine called <a target="_blank" href="http://thedukeandthedauphin.bandcamp.com">The Duke And The Dauphin</a>,
+          a duo consisting of me doing the music, and my friend Jeffrey Mull writing the words.
+        </p>
+        <p>
+          These three songs were written, recorded, mixed, mastered, and released in a single week.
+        </p>
+      </div>
     ),
   },
 }

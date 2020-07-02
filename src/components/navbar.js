@@ -54,7 +54,7 @@ const Navbar = ({ isMobile }) => {
 }
 
 const mapSizesToProps = ({ width }) => ({
-  isMobile: width < 1000,
+  isMobile: width < 705,
 })
 
 export default withSizes(mapSizesToProps)(Navbar)

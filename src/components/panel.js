@@ -11,6 +11,7 @@ const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
       <div className="panel__mobile__content">
         {header && <h1>{header}</h1>}
         {imageContent && <>{imageContent}</>}
+        <Spacer marginTop={10} />
         {backButton && <>{backButton}</>}
         <Spacer marginTop={40} />
         {content}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import { useQueryParam, NumberParam, StringParam } from "use-query-params";
 import { windowSize } from '../lib/windowSize' 
@@ -15,6 +15,7 @@ import withSizes from 'react-sizes'
 
 const ProjectsPage = ({ isMobile }) => {
   const [project, setProjectParam] = useQueryParam('project', StringParam);
+  const [exitingPage, setExitingPage] = useState(false)
   const scrollEl = useRef(null);
   const numberOfRows = Math.ceil(Object.entries(projects).length / 3)
 
@@ -25,7 +26,9 @@ const ProjectsPage = ({ isMobile }) => {
   const currentProject = () => {
     let url = new URL(window.location)
     let parsed = queryString.parse(url.search)
-    return parsed.project
+    if (projects[parsed.project]) {
+      return parsed.project
+    }
   }
 
   const scrollToTop = () => {
@@ -111,7 +114,10 @@ const ProjectsPage = ({ isMobile }) => {
         <CSSTransition
           key={projectQueryParamsPresent()}
           addEndListener={(node, done) => {
-            if (node.className.match("fade-enter-active")) { scrollToTop() }
+            let enteringNewPage = node.className.match("fade-enter-active");
+            let leavingProjectsPages = !window.location.href.match('projects')
+            if (enteringNewPage) { scrollToTop() }
+            if (enteringNewPage && leavingProjectsPages) { setExitingPage(true) }
             node.addEventListener("transitionend", done, false)
           }}
           classNames='fade'
@@ -125,12 +131,14 @@ const ProjectsPage = ({ isMobile }) => {
   return (
     <Layout scrollEnabled={!currentProject()}>
       <div ref={scrollEl} className="projects__main__top" />
-
         <SEO title="Projects" />
         <Spacer marginTop={isMobile ? 0 : 50} />
-        {backgroundContent()}
-        {foregroundContent()}
-
+        {!exitingPage && 
+          <>
+            {backgroundContent()}
+            {foregroundContent()}
+          </>
+        }
     </Layout>
   )
 }

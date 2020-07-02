@@ -78,7 +78,7 @@ const AboutPage = ({ isMobile }) => {
         />
         <div style={{ position: 'relative'}}>
           <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -900 : -100} left={isMobile ? 0 : -330} variation={2} animation="g1" />
-          <PatternInstance opacity={bgImageOpacity()} top={-440} left={-80} variation={4} animation="g2" />
+          <PatternInstance opacity={bgImageOpacity()} top={-450} left={-80} variation={4} animation="g2" />
           <PatternInstance opacity={bgImageOpacity()} top={-750} left={-230} variation={5} animation="g-main" />
           <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -500 : -270} left={isMobile ? 250 : -430} variation={3} animation="g3" />
           <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -800 : 0} left={isMobile ? 300 : 630} variation={6} animation="g2" />
