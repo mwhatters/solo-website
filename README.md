@@ -10,7 +10,7 @@ All of the assets were made by myself in photoshop. Most of the project art was 
 
 ### deployment
 
-This site uses [travis](https://www.travis-ci.com) to auto deploy any changes to a [linode server](https://www.linode.com/) when i merge pull requests into master.
+This site uses [travisci](https://www.travis-ci.com) to auto deploy any changes to a [linode server](https://www.linode.com/) when i merge pull requests into master.
 
 ### TODO
 
