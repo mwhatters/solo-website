@@ -14,7 +14,8 @@ This site uses [travisci](https://www.travis-ci.com) to auto deploy any changes 
 
 ### TODO
 
-- Set up SSL for mwhatt.com
+- Set up SSL for mwhatt.com / add https
 - Do some copy editing and review
 - cleanup some code / potentially wonky css issues on mobile
 - improve accessibility features
+- add SEO information
