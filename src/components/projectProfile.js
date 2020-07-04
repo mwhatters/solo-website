@@ -34,7 +34,12 @@ const ProjectProfile = ({ project, highlighted, onBack }) => {
             imageContent={fetchProjectImageContent()}
             content={project.writtenContent}
             backButton={(
-              <div className="project__profile__back" onClick={onBack}>
+              <div 
+                className="project__profile__back" 
+                onClick={onBack} onKeyDown={onBack} 
+                role="button"
+                tabIndex="0"
+              >
                 Return to Grid
               </div>
             )}

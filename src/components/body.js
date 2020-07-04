@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState, setState } from "react"
+import React from "react"
 
 const Body = ({ children }) => {
   Body.propTypes = {

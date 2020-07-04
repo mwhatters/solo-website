@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState, setState } from "react"
+import React from "react"
 import Spacer from "../components/util/spacer"
 import "../css/components/panel.css"
 import withSizes from 'react-sizes'

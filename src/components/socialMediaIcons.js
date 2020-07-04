@@ -1,7 +1,5 @@
-import PropTypes from "prop-types"
-import React, { useState, setState } from "react"
+import React from "react"
 import { FaTwitter, FaGithub, FaLinkedin, FaYoutube, FaSoundcloud, FaFileAlt } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
 import SocialMediaIcon from "../components/socialMediaIcon"
 
 
