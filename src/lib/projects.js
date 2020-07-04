@@ -6,6 +6,7 @@ const projects = {
     imageKey: 'glyph',
     imageContent: (
       <iframe
+        title="glyph"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
@@ -19,8 +20,8 @@ const projects = {
     writtenContent: (
       <>
       <p>
-        <a target="_blank" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
-          <a target="_blank" href="https://youtu.be/0_xY7Gy5uJE">Playthrough of the mod</a>
+        <a target="_blank" rel="noreferrer" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
+          <a target="_blank" rel="noreferrer" href="https://youtu.be/0_xY7Gy5uJE">Playthrough of the mod</a>
       </p>
       <p>
         <em>
@@ -30,13 +31,13 @@ const projects = {
         </em> <strong>-- a review by a player, found on Gamebanana</strong>
       </p>
       <p>
-          Glyph is a mod for the popular 2d platformer called <a target="_blank" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 250 rooms of gameplay, 
+          Glyph is a mod for the popular 2d platformer called <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 250 rooms of gameplay, 
         custom assets (mostly re-colors of base-game assets), 50+ minutes of original music, and a large amount of custom code (written with C#). It's one of the most
         popular mods released for the game yet, with over 56 thousand views and 750 downloads.
       </p>
       <p>
           This was one of the more affirming experiences I've ever had working with video game design. What most excited me was the
-        use of <a target="_blank" href="https://www.fmod.com/">FMOD</a> to integrate a fully dynamic musical score with the gameplay. The gimmick of the map revolves around traveling through portals
+        use of <a target="_blank" rel="noreferrer" href="https://www.fmod.com/">FMOD</a> to integrate a fully dynamic musical score with the gameplay. The gimmick of the map revolves around traveling through portals
         to different dimensions. In each dimension, a different ambience and set of instrumentation accompanies the change of scenery. This was both a compositional challenge in a addition to a technical one,
         but the results were very effective. 
       </p>
@@ -52,6 +53,7 @@ const projects = {
     imageKey: 'sc2020',
     imageContent: (
       <iframe 
+        title="SpringCollab2020"
         width="250" 
         height="300" 
         scrolling="no" 
@@ -61,7 +63,7 @@ const projects = {
     ),
     writtenContent: (
       <div>
-        This is a sample song from work I did for a community modding collaboration for the game <a target="_blank" href="http://www.celestegame.com/">Celeste</a>.
+        This is a sample song from work I did for a community modding collaboration for the game <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a>.
         In this collaboration I contributed over 10 original songs, with dynamic layering included. I also designed a short level for the project. The full set of songs I composed
         will be available once the project is made publically available.
       </div>
@@ -72,6 +74,7 @@ const projects = {
     imageKey: 'brookspark',
     imageContent: (
       <iframe
+        title="BrooksPark"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
@@ -102,7 +105,7 @@ const projects = {
     writtenContent: (
       <div>
         <p>
-          <a target="_blank" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
+          <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
         </p>
         <p>
           <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
@@ -118,7 +121,7 @@ const projects = {
           <p>
             <strong>Original Trailer</strong>
           </p>
-          <iframe width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <br></br>
           <br></br>
         </div>
@@ -130,6 +133,7 @@ const projects = {
     imageKey: 'ontothemoon',
     imageContent: (
       <iframe
+        title="OnToTheMoon"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
@@ -162,15 +166,15 @@ const projects = {
     writtenContent: (
       <div>
         <p>
-          <a target="_blank" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
-          <a target="_blank" href="https://youtu.be/k7FpchG9slQ">Playthrough of the mod</a>
+          <a target="_blank" rel="noreferrer" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
+          <a target="_blank" rel="noreferrer" href="https://youtu.be/k7FpchG9slQ">Playthrough of the mod</a>
         </p>
         <p>
-          Sib is the first mod I made for the game <a target="_blank" href="http://www.celestegame.com/">Celeste</a> and is noticably less polished
+          Sib is the first mod I made for the game <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> and is noticably less polished
           than its successor, <a href="./?project=glyph">Glyph</a>. It is still fondly enjoyed by the community, however.
         </p>
         <p>
-          The project features a 12-minute soundtrack I composed myself. You can listen to it <a target="_blank" href="https://soundcloud.com/lushboy-studios/sets/sib-the-crane-soundtrack">on Soundcloud</a>
+          The project features a 12-minute soundtrack I composed myself. You can listen to it <a target="_blank" rel="noreferrer" href="https://soundcloud.com/lushboy-studios/sets/sib-the-crane-soundtrack">on Soundcloud</a>
         </p>
 
       </div>
@@ -181,6 +185,7 @@ const projects = {
     imageKey: 'cheshireking',
     imageContent: (
       <iframe
+        title="CheshireKing"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
@@ -210,6 +215,7 @@ const projects = {
     imageKey: 'intosilence',
     imageContent: (
       <iframe
+        title="IntoSilence"
         width="250"
         height="300"
         scrolling="no"
@@ -235,6 +241,7 @@ const projects = {
     imageKey: 'aloud',
     imageContent: (
       <iframe
+        title="Aloud"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
@@ -247,7 +254,7 @@ const projects = {
     writtenContent: (
       <div>
         <p>
-          Aloud is a song by an old folk project of mine called <a target="_blank" href="http://thedukeandthedauphin.bandcamp.com">The Duke And The Dauphin</a>,
+          Aloud is a song by an old folk project of mine called <a target="_blank" rel="noreferrer" href="http://thedukeandthedauphin.bandcamp.com">The Duke And The Dauphin</a>,
           a duo consisting of me doing the music, and my friend Jeffrey Mull writing the words. This is a remake of a demo recorded back in 2012.
         </p>
       </div>
@@ -258,6 +265,7 @@ const projects = {
     imageKey: 'onisolation',
     imageContent: (
       <iframe
+        title="OnIsolation"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
@@ -271,7 +279,7 @@ const projects = {
     writtenContent: (
       <div>
         <p>
-          On Isolation is the last album of an old folk project of mine called <a target="_blank" href="http://thedukeandthedauphin.bandcamp.com">The Duke And The Dauphin</a>,
+          On Isolation is the last album of an old folk project of mine called <a target="_blank" rel="noreferrer" href="http://thedukeandthedauphin.bandcamp.com">The Duke And The Dauphin</a>,
           a duo consisting of me doing the music, and my friend Jeffrey Mull writing the words.
         </p>
         <p>

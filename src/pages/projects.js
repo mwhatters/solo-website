@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
-import { useQueryParam, NumberParam, StringParam } from "use-query-params";
-import { windowSize } from '../lib/windowSize' 
+import { useQueryParam, StringParam } from "use-query-params";
 import queryString from 'query-string'
 import projects from '../lib/projects' 
 import "../css/pages/projects.css"
@@ -14,7 +13,7 @@ import PatternInstance from "../components/patternInstance"
 import withSizes from 'react-sizes'
 
 const ProjectsPage = ({ isMobile }) => {
-  const [project, setProjectParam] = useQueryParam('project', StringParam);
+  const [_, setProjectParam] = useQueryParam('project', StringParam);
   const [exitingPage, setExitingPage] = useState(false)
   const anchor = useRef(null);
 
@@ -53,8 +52,8 @@ const ProjectsPage = ({ isMobile }) => {
       musicProfiles.push(
         <div
           onClick={() => highlightProject(key)}
+          onKeyDown={() => highlightProject(key)}
           key={projectData.name}
-          style={{}}
         >
           <ProjectProfile project={projectData} highlighted={false} />
         </div>

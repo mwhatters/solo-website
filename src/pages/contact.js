@@ -21,9 +21,9 @@ const ContactPage = ({ isMobile }) => {
       <SocialMediaIcons />
       <Spacer marginTop={20} />
       <div className="contact__footer_info">
-        This page was made using the react framework <a target="_blank" href="https://www.gatsbyjs.org/">Gatsby</a>
+        This page was made using the react framework <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.org/">Gatsby</a>
         <br />
-        You can find the source code for it <a target="_blank" href="https://github.com/mwhatters/solo-website">here</a>
+        You can find the source code for it <a target="_blank" rel="noreferrer" href="https://github.com/mwhatters/solo-website">here</a>
       </div>
       <Spacer marginTop={40} />
     </>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Body from "../components/body"
@@ -20,19 +20,19 @@ const Layout = ({ children, alignment, scrollEnabled, isShortScreen }) => {
   
   return (
     <div>
-        <div 
-          className={`layout__main_wrapper ${scrollEnabled || isShortScreen ? 'o__scroll' : ''}`}
-          style={{ alignItems: alignment }}
-          >
-          <Body 
-            children={children} 
-            siteTitle={data.site.siteMetadata.title} 
-          />
-        </div>
-        <div className="layout__fake_footer"></div>
-        <TransitionPortal>
-            <Navbar />
-        </TransitionPortal>
+      <div 
+        className={`layout__main_wrapper ${scrollEnabled || isShortScreen ? 'o__scroll' : ''}`}
+        style={{ alignItems: alignment }}
+        >
+        <Body 
+          children={children} 
+          siteTitle={data.site.siteMetadata.title} 
+        />
+      </div>
+      <div className="layout__fake_footer"></div>
+      <TransitionPortal>
+          <Navbar />
+      </TransitionPortal>
     </div>
   )
 }

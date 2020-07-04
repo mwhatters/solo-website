@@ -7,13 +7,18 @@ const SocialMediaIcon = ({ children, href }) => {
     <IconContext.Provider value={{ color: "#89747F", size: 40 }}>
       <div className="contact__social_icon__wrapper">
         <span className="contact__social_icon">
-          <a target="_blank" href={href}>
+          <a target="_blank" rel="noreferrer" href={href}>
             {children}
           </a>
         </span>
       </div>
     </IconContext.Provider>
   )
+}
+
+SocialMediaIcon.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
 }
 
 export default SocialMediaIcon
