@@ -23,6 +23,7 @@ const Navbar = ({ isMobile, }) => {
     if (!windowAndDocumentIsDefined()) {
       setWidth(0)
       setOffset(0)
+      return;
     }
 
     let url = new URL(window.location)
