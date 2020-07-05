@@ -44,7 +44,7 @@ const Navbar = ({ isMobile, }) => {
       return isMobile
     }
 
-    if (typeof isMobile !== 'undefined') {
+    if (typeof isMobile === 'undefined') {
       return window.innerWidth < 705      
     }
 
