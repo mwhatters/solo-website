@@ -25,16 +25,31 @@ const Navbar = ({ isMobile, }) => {
       setOffset(0)
       return;
     }
+    setNavBarBorderParameters()
+    addNavBarTransitionCss()
+    window.onresize = setNavBarBorderParameters;
+    return;
+  }, [])
 
+  const setNavBarBorderParameters = () => {
     let url = new URL(window.location)
     let path = url.pathname
     let activeNode = document.getElementById(`nav__${path}`)
     setWidth(activeNode.offsetWidth)
     setOffset(activeNode.offsetLeft)
+  }
 
-    addNavBarTransitionCss()
-    return;
-  }, [])
+  const mobileEnabled = () => {
+    if (!windowAndDocumentIsDefined()) {
+      return isMobile
+    }
+
+    if (typeof isMobile !== 'undefined') {
+      return window.innerWidth < 705      
+    }
+
+    return isMobile
+  }
 
   const addNavBarTransitionCss = async function() {
     await timeout(50)
@@ -61,7 +76,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaHome /> : "HOME"}
+            {mobileEnabled() ? <FaHome /> : "HOME"}
           </AniLink>
           <AniLink fade
             id="nav__/about/"
@@ -71,7 +86,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaAddressCard /> : "ABOUT"}
+            {mobileEnabled() ? <FaAddressCard /> : "ABOUT"}
           </AniLink>
           <AniLink fade
             id="nav__/projects/"
@@ -82,7 +97,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaArchive /> : "PROJECTS"}
+            {mobileEnabled() ? <FaArchive /> : "PROJECTS"}
           </AniLink>
           <AniLink fade
             id="nav__/contact/"
@@ -92,7 +107,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaPhone /> : "CONTACT"}
+            {mobileEnabled() ? <FaPhone /> : "CONTACT"}
           </AniLink>
         </nav>
       </IconContext.Provider>
