@@ -5,7 +5,9 @@ import Navbar from "../components/navbar"
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      {children}
+      <div className="layout__wrapper_main">
+        {children}
+      </div>
       <Navbar />
     </>
   )
