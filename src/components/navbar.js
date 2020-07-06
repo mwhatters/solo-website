@@ -33,12 +33,12 @@ const Navbar = ({ isMobile, }) => {
   }, [])
 
   const calibrateNavBar = () => {
+    mobileEnabled()
     let url = new URL(window.location)
     let path = url.pathname
     let activeNode = document.getElementById(`nav__${path}`)
     setWidth(activeNode.offsetWidth)
     setOffset(activeNode.offsetLeft)
-    mobileEnabled()
   }
 
   const mobileEnabled = () => {
