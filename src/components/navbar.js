@@ -11,14 +11,13 @@ import { timeout } from '../lib/timeout'
 import NavbarBorder from './navbarBorder';
 
 
-const Navbar = ({ isMobile, }) => {
+const Navbar = ({ isMobile }) => {
   const windowAndDocumentIsDefined = () => {
     return typeof window !== 'undefined' && typeof document !== 'undefined'
   }
 
   const [width, setWidth] = useState(0)
   const [offset, setOffset] = useState(0)
-  const [mobile, setMobile] = useState(false)
 
   useEffect(() => {
     if (!windowAndDocumentIsDefined()) {
@@ -33,20 +32,11 @@ const Navbar = ({ isMobile, }) => {
   }, [])
 
   const calibrateNavBar = () => {
-    mobileEnabled()
     let url = new URL(window.location)
     let path = url.pathname
     let activeNode = document.getElementById(`nav__${path}`)
     setWidth(activeNode.offsetWidth)
     setOffset(activeNode.offsetLeft)
-  }
-
-  const mobileEnabled = () => {
-    if (!windowAndDocumentIsDefined()) {
-      return setMobile(isMobile)
-    }
-
-    setMobile(window.innerWidth < 705)
   }
 
   const addNavBarTransitionCss = async function() {
@@ -74,7 +64,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {mobile ? <FaHome /> : "HOME"}
+            {isMobile ? <FaHome /> : "HOME"}
           </AniLink>
           <AniLink fade
             id="nav__/about/"
@@ -84,7 +74,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {mobile ? <FaAddressCard /> : "ABOUT"}
+            {isMobile ? <FaAddressCard /> : "ABOUT"}
           </AniLink>
           <AniLink fade
             id="nav__/projects/"
@@ -95,7 +85,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {mobile ? <FaArchive /> : "PROJECTS"}
+            {isMobile ? <FaArchive /> : "PROJECTS"}
           </AniLink>
           <AniLink fade
             id="nav__/contact/"
@@ -105,7 +95,7 @@ const Navbar = ({ isMobile, }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {mobile ? <FaPhone /> : "CONTACT"}
+            {isMobile ? <FaPhone /> : "CONTACT"}
           </AniLink>
         </nav>
       </IconContext.Provider>
