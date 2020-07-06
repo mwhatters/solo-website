@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Body from "../components/body"
 import "../css/components/layout.css"
 import withSizes from 'react-sizes'
+import Navbar from "../components/navbar"
 
 const Layout = ({ children, alignment, scrollEnabled, isShortScreen }) => {
   const data = useStaticQuery(graphql`
