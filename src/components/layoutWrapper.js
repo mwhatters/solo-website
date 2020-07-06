@@ -3,6 +3,10 @@ import PropTypes from "prop-types"
 import Navbar from "../components/navbar"
 
 const LayoutWrapper = ({ children }) => {
+  if (typeof window === `undefined`) {
+    return (<></>);
+  }
+
   return (
     <>
       {children}
