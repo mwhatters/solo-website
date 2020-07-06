@@ -109,6 +109,10 @@ Navbar.propTypes = {
   isMobile: PropTypes.bool,
 }
 
+Navbar.defaultProps = {
+  isMobile: false,
+}
+
 const mapSizesToProps = ({ width }) => ({
   isMobile: width < 705,
 })
