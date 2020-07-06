@@ -25,7 +25,7 @@ const Navbar = ({ isMobile }) => {
       setOffset(0)
       return;
     }
-    console.log(isMobile)
+
     calibrateNavBar()
     addNavBarTransitionCss()
     window.onresize = calibrateNavBar;
