@@ -121,7 +121,7 @@ const projects = {
           <p>
             <strong>Original Trailer</strong>
           </p>
-          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
           <br></br>
           <br></br>
         </div>
