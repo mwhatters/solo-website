@@ -43,8 +43,16 @@ const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
     </div>
   )
 
+  const onMobile = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 705
+    } else {
+      return isMobile
+    }
+  }
+
   const display = () => {
-    return isMobile ? mobileDisplay : desktopDisplay
+    return onMobile() ? mobileDisplay : desktopDisplay
   }
 
   return (

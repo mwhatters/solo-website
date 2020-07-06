@@ -135,11 +135,19 @@ const ProjectsPage = ({ isMobile }) => {
     )
   }
 
+  const onMobile = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 705
+    } else {
+      return isMobile
+    }
+  }
+
   return (
     <Layout scrollEnabled={!currentProject()}>
       <div ref={anchor} className="projects__main__top" />
         <SEO title="Projects" />
-        <Spacer marginTop={isMobile ? 0 : 50} />
+      <Spacer marginTop={onMobile() ? 0 : 50} />
         {!exitingPage && 
           <>
             {backgroundContent()}

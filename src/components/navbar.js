@@ -40,6 +40,14 @@ const Navbar = ({ isMobile }) => {
     setOffset(activeNode.offsetLeft)
   }
 
+  const onMobile = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 705
+    } else {
+      return isMobile
+    }
+  }
+
   const addNavBarTransitionCss = async function() {
     await timeout(50)
     let navBarEl = document.getElementById(`navbar__border`)
@@ -65,7 +73,7 @@ const Navbar = ({ isMobile }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaHome /> : "HOME"}
+            {onMobile() ? <FaHome /> : "HOME"}
           </AniLink>
           <AniLink fade
             id="nav__/about/"
@@ -75,7 +83,7 @@ const Navbar = ({ isMobile }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaAddressCard /> : "ABOUT"}
+            {onMobile() ? <FaAddressCard /> : "ABOUT"}
           </AniLink>
           <AniLink fade
             id="nav__/projects/"
@@ -86,7 +94,7 @@ const Navbar = ({ isMobile }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaArchive /> : "PROJECTS"}
+            {onMobile() ? <FaArchive /> : "PROJECTS"}
           </AniLink>
           <AniLink fade
             id="nav__/contact/"
@@ -96,7 +104,7 @@ const Navbar = ({ isMobile }) => {
             activeClassName="navbar__link-selected"
             onClick={setActiveMenuItem}
           >
-            {isMobile ? <FaPhone /> : "CONTACT"}
+            {onMobile() ? <FaPhone /> : "CONTACT"}
           </AniLink>
         </nav>
       </IconContext.Provider>

@@ -29,13 +29,21 @@ const ContactPage = ({ isMobile }) => {
     </>
   )
 
-  const bgImageOpacity = () => { return isMobile ? 0.2 : 1 }
+  const onMobile = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 705
+    } else {
+      return isMobile
+    }
+  }
+
+  const bgImageOpacity = () => { return onMobile() ? 0.2 : 1 }
 
   const backgroundContent = () => (
     <div style={{ position: 'relative' }}>
       <PatternInstance opacity={bgImageOpacity()} top={-650} left={-230} variation={4} animation="g4" />
-      <PatternInstance opacity={bgImageOpacity()} top={isMobile ? -400 : -180} left={isMobile ? 200 : 320} variation={5} animation="g2" />
-      {!isMobile &&
+      <PatternInstance opacity={bgImageOpacity()} top={onMobile() ? -400 : -180} left={onMobile() ? 200 : 320} variation={5} animation="g2" />
+      {!onMobile() &&
         <>
           <PatternInstance top={-450} left={600} variation={2} animation="g5" />
           <PatternInstance top={-350} left={-450} variation={3} animation="g6" />
