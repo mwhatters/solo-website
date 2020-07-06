@@ -28,6 +28,7 @@ const Layout = ({ children, alignment, scrollEnabled, isShortScreen }) => {
         />
       </div>
       <div className="layout__fake_footer"></div>
+      <Navbar />
     </div>
   )
 }
