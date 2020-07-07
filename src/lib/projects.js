@@ -111,11 +111,11 @@ const projects = {
           <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
         </p>
         <p>
-          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna, 
-          who much overcome their creator and defeat his powerful minions. The game is built around the concept of being able to rotate the world in which you are moving through, 
+          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna
+          and their journey towards overcoming their creator and defeating his powerful minions. The game is built around the concept of being able to rotate the world you are moving through, 
           thus affecting the gravity of the player and surrounding objects.
           It was released in August of 2017 and was my first attempt at designing a video game from scratch.
-          Given my limitations on both a technical and visual level, I'm ultiamtely proud of this effort. 
+          Given my limitations on both a technical and visual level, I'm ultimately proud of this effort. 
         </p>
         <div>
           <p>

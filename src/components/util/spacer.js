@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Spacer = ({ marginTop, marginBottom, marginLeft, marginRight }) => {
+const Spacer = ({ marginTop, marginBottom, marginLeft, marginRight, flex }) => {
   return (
     <div 
       style={{
@@ -10,7 +10,7 @@ const Spacer = ({ marginTop, marginBottom, marginLeft, marginRight }) => {
         marginLeft,
         marginRight,
         display: 'block',
-        flex: 1,
+        flex,
       }}
     />
   )
@@ -21,6 +21,7 @@ Spacer.propTypes = {
   marginBottom: PropTypes.number,
   marginLeft: PropTypes.number,
   marginRight: PropTypes.number,
+  flex: PropTypes.number,
 }
 
 Spacer.defaultProps = {
@@ -28,6 +29,7 @@ Spacer.defaultProps = {
   marginBottom: 0,
   marginLeft: 0,
   marginRight: 0,
+  flex: 1,
 }
 
 export default Spacer
