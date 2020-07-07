@@ -139,7 +139,7 @@ const ProjectsPage = ({ isMobile }) => {
     <Layout scrollEnabled={!currentProject()}>
       <div ref={anchor} className="projects__main__top" />
         <SEO title="Projects" />
-        <Spacer marginTop={isMobile ? 0 : 50} />
+        <Spacer flex={0} marginTop={isMobile ? 0 : 50} />
         {!exitingPage && 
           <>
             {backgroundContent()}
