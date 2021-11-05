@@ -17,8 +17,8 @@ export const profileContent = (
     </p>
     <p>
       I just moved down to San Diego, California, and in search for work!
-      I have web development (ruby on rails, react, ember), music composition, and dynamic audio engineering experiennce.
-      At this point I'm looking for work in any of those fields, though I admittedly have the most professional experience in software.
+      I have web development (ruby on rails, react, ember), music composition, and dynamic audio engineering experience.
+      At this point I'm looking for work in any of those fields, though I have the most professional experience in software.
     </p>
     <p>
     In an effort to de-rust on React, I made this website. Consider this site a library of all of the projects I've done over the last few years.
