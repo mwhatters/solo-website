@@ -1,6 +1,29 @@
 import React from "react"
 
 const projects = {
+  gotitem: {
+    name: 'GOT ITEM!',
+    imageKey: 'gotitem',
+    imageContent: (
+      <iframe
+        title="glyph"
+        style={{
+          border: '2px solid rgb(122, 122, 111)',
+          width: '270px',
+          height: '412px',
+        }}
+        src="https://bandcamp.com/EmbeddedPlayer/album=2583345865/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+        seamless>
+        <a href="http://lushboystudios.bandcamp.com/album/glyph">GOT ITEM! by marshall</a>
+      </iframe>
+    ),
+    writtenContent: (
+      <div>
+        A small EP I made over the course of a week. All started as original 30 second clips made for twitter, but were
+        expanded upon later on for a more complete listen.
+      </div>
+    )
+  },
   glyph: {
     name: 'Glyph',
     imageKey: 'glyph',
@@ -14,7 +37,7 @@ const projects = {
         }}
         src="https://bandcamp.com/EmbeddedPlayer/album=1326727985/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=false/"
         seamless>
-        <a href="http://lushboystudios.bandcamp.com/album/glyph">Glyph by beefyuncle</a>
+        <a href="http://lushboystudios.bandcamp.com/album/glyph">Glyph by marshall</a>
       </iframe>
     ),
     writtenContent: (
