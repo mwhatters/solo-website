@@ -1,6 +1,6 @@
 ### my portfolio website
 
-Visit the site at http://mwhatt.com/
+Visit the site at https://mwhatt.com/
 
 This is a portfolio site I built in about 4-5 days using [gatsby.js](https://www.gatsbyjs.org/)! It was primarily a de-rusting exercise but also an exploration of using the gatsby framework for the first time. Overall the framework is super enjoyable to work with. It features some information about myself, a lot of the projects that i've worked on, and links to other places where my work is featured. As I complete more projects I'll continue to add them to this website.
 
