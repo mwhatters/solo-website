@@ -36,7 +36,10 @@
     "use-query-params": "^1.1.5"
   },
   "resolutions": {
-    "sharp": "0.24.0"
+    "sharp": "0.27.0",
+    "graphql": "^15.4.0",
+    "graphql-compose": "^7.25.0",
+    "webpack": "^5.24.2"
   },
   "devDependencies": {
     "prettier": "2.0.5"
