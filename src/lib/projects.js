@@ -1,9 +1,25 @@
 import React from "react"
 
 const projects = {
-  gotitem: {
-    name: 'GOT ITEM!',
-    imageKey: 'gotitem',
+  surfacelevel: {
+    name: 'Surface Level',
+    imageKey: 'surfacelevel',
+    writtenContent: (
+      <>
+        <p>
+          Surface Level is a game I developed with friends in a weekend for Ludum Dare 48. It was
+          built using the virtual console, PICO-8. PICO-8 leverages lua as its scripting language. In this project, I wrote the core game mechanic
+          code, composed the music and sfx, and implemented the level transition system.
+        </p>
+        <p>
+          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/surface-level">itch.io</a>!
+        </p>
+      </>
+    ),
+  },
+  gatetothestars: {
+    name: 'Gate To The Stars',
+    imageKey: 'gatetothestars',
     imageContent: (
       <iframe
         title="glyph"
@@ -12,16 +28,61 @@ const projects = {
           width: '270px',
           height: '412px',
         }}
-        src="https://bandcamp.com/EmbeddedPlayer/album=2583345865/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1059420190&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
         seamless>
-        <a href="http://lushboystudios.bandcamp.com/album/glyph">GOT ITEM! by marshall</a>
+        <a href="https://soundcloud.com/lushboy-studios/gate-to-the-stars">Gate to the Stars by marshall</a>
       </iframe>
     ),
     writtenContent: (
-      <div>
-        A small EP I made over the course of a week. All started as original 30 second clips made for twitter, but were
-        expanded upon later on for a more complete listen.
-      </div>
+      <>
+      <p>
+        <a target="_blank" rel="noreferrer" href="https://gamebanana.com/maps/291623">Link to Mod</a><br/>
+          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=uqH3jkGYIDo">Playthrough of the mod</a>
+      </p>
+      <p>
+        <em>
+        "Beautiful maps with spacious + enjoyable beginner-friendly gameplay. 
+        I especially had fun with the single dash berries that offer interesting advanced + 
+        puzzle-y challenges!"
+        </em> <strong>-- a review by a player, found on Gamebanana</strong>
+      </p>
+      <p>
+          Gate to the Stars is a mod for the popular 2d platformer called <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 30 rooms of gameplay, 
+        custom assets and art, 10+ minutes of original music, and custom coded mechanics.
+      </p>
+      <p>
+        All the content of first chapter of Gate to the Stars (titled Impossible Visitors) was made in a weekend. The second chapter
+        was made in about two weeks.
+      </p>
+      </>
+    ),
+  },
+  gotitem: {
+    name: 'GOT ITEM!',
+    imageKey: 'gotitem',
+    imageContent: (
+      <iframe
+        title="got-item"
+        style={{
+          border: '2px solid rgb(122, 122, 111)',
+          width: '270px',
+          height: '412px',
+        }}
+        src="https://bandcamp.com/EmbeddedPlayer/album=2583345865/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+        seamless>
+        <a href="http://lushboystudios.bandcamp.com/album/got-item">GOT ITEM! by marshall</a>
+      </iframe>
+    ),
+    writtenContent: (
+      <>
+        <p>
+          A small EP I made over the course of a week. All started as original 30 second clips made for twitter, but were
+          expanded upon later on for a more complete listen.
+        </p>
+        <p>
+          This EP is available for listening on most streaming platforms!
+        </p>
+      </>
     )
   },
   glyph: {
@@ -54,12 +115,13 @@ const projects = {
         </em> <strong>-- a review by a player, found on Gamebanana</strong>
       </p>
       <p>
-          Glyph is a mod for the popular 2d platformer called <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 250 rooms of gameplay, 
+        Glyph is a mod for the popular 2d platformer called <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 250 rooms of gameplay, 
         custom assets (mostly re-colors of base-game assets), 50+ minutes of original music, and a large amount of custom code (written with C#). It's one of the most
-        popular mods released for the game yet, with over 56 thousand views and 750 downloads.
+        popular mods released for the game yet, with over 180 thousand views and 4,000 downloads. It has been featured at high-profile
+        speedrunning events, including <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=_zon5vP6qIo">Summer Games Done Quick</a>
       </p>
       <p>
-          This was one of the more affirming experiences I've ever had working with video game design. What most excited me was the
+        This was one of the more affirming experiences I've ever had working with video game design. What most excited me was the
         use of <a target="_blank" rel="noreferrer" href="https://www.fmod.com/">FMOD</a> to integrate a fully dynamic musical score with the gameplay. The gimmick of the map revolves around traveling through portals
         to different dimensions. In each dimension, a different ambience and set of instrumentation accompanies the change of scenery. This was both a compositional challenge in a addition to a technical one,
         but the results were very effective. 
@@ -81,7 +143,7 @@ const projects = {
         height="300" 
         scrolling="no" 
         allow="autoplay" 
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/845548390&color=%2394745c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/884231077&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
       </iframe>
     ),
     writtenContent: (
