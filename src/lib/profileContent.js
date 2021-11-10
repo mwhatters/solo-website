@@ -32,7 +32,7 @@ export const profileContent = (
     </p>
     <p>
       <a
-        href="https://drive.google.com/file/d/1o7oqI43N-4-18EGkWcKZdpjnVboe6Ppi/view?usp=sharing"
+        href="https://drive.google.com/file/d/1oMv06EKCDOcHM_CaPkJ7mCDDuUtqbdve/view?usp=sharing"
         target="_blank" rel="noreferrer"
       >
         Link to my CV

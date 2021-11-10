@@ -26,7 +26,7 @@ const SocialMediaIcons = () => {
         <FaSoundcloud />
         </SocialMediaIcon>
         
-        <SocialMediaIcon href="https://drive.google.com/file/d/1qO16UjgJumDRsGEuqUTzHhTJZHNru0aQ/view?usp=sharing">
+        <SocialMediaIcon href="https://drive.google.com/file/d/1oMv06EKCDOcHM_CaPkJ7mCDDuUtqbdve/view?usp=sharing">
           <FaFileAlt />
         </SocialMediaIcon>
       </div>
