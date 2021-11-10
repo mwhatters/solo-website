@@ -12,13 +12,7 @@ import profileContent from '../lib/profileContent'
 const AboutPage = ({ isMobile }) => {
   const data = useStaticQuery(graphql`
     query {
-      profile: file(relativePath: { eq: "itme.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+      profile: file(relativePath: { eq: "itme.jpg" }) { childImageSharp { fluid { ...GatsbyImageSharpFluid } } }
     }
   `)
 
