@@ -1,12 +1,13 @@
 language: node_js
 node_js:
-- '12.7'
+- '16.11.1'
 dist: trusty
 sudo: false
 addons:
   ssh_known_hosts:
   - 45.79.91.85
 before_install:
+- sudo apt-get install -y nasm
 - openssl aes-256-cbc -K $encrypted_0605244fb557_key -iv $encrypted_0605244fb557_iv
   -in scripts/gatsby-deploy.enc -out scripts/gatsby-deploy -d
 - eval "$(ssh-agent -s)"

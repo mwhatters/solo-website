@@ -6,6 +6,9 @@ import { useStaticQuery, graphql } from "gatsby"
 const ProjectImage = ({ projectKey, parentStyle }) => {
   const data = useStaticQuery(graphql`
     query {
+      gotitem:        file(relativePath: { eq: "projects/gotitem.jpg" })        { childImageSharp { fluid { ...GatsbyImageSharpFluid } } },
+      gatetothestars: file(relativePath: { eq: "projects/gatetothestars.jpg" })        { childImageSharp { fluid { ...GatsbyImageSharpFluid } } },
+      surfacelevel: file(relativePath: { eq: "projects/surfacelevel.jpg" })        { childImageSharp { fluid { ...GatsbyImageSharpFluid } } },
       glyph:        file(relativePath: { eq: "projects/glyph.jpg" })        { childImageSharp { fluid { ...GatsbyImageSharpFluid } } },
       sc2020:       file(relativePath: { eq: "projects/sc2020.jpg" })       { childImageSharp { fluid { ...GatsbyImageSharpFluid } } },
       brookspark:   file(relativePath: { eq: "projects/brookspark.jpg" })   { childImageSharp { fluid { ...GatsbyImageSharpFluid } } },
