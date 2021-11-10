@@ -17,7 +17,7 @@ export const profileContent = (
       and most importantly, took time to re-evaluate what it is I'm looking for in life.
     </p>
     <p>
-      I moved down to San Diego, California, and in search for work!
+      I moved down to San Diego, California, and am in search for work!
       I have experience with web development (ruby on rails, react, ember), game development (unity, godot, monogame), 
       music composition, and dynamic audio engineering.
       At this point I'm looking for work in any of those fields, 
@@ -32,7 +32,7 @@ export const profileContent = (
     </p>
     <p>
       <a
-        href="https://drive.google.com/file/d/1o7oqI43N-4-18EGkWcKZdpjnVboe6Ppi/view?usp=sharing"
+        href="https://drive.google.com/file/d/1oMv06EKCDOcHM_CaPkJ7mCDDuUtqbdve/view?usp=sharing"
         target="_blank" rel="noreferrer"
       >
         Link to my CV
