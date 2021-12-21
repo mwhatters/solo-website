@@ -1,6 +1,58 @@
 import React from "react"
 
 const projects = {
+  namelesspillars: {
+    name: 'Nameless Pillars',
+    imageKey: 'namelesspillars',
+    imageContent: (
+      <iframe
+        title="nameless pillars"
+        style={{
+          border: '2px solid rgb(122, 122, 111)',
+          width: '270px',
+          height: '412px',
+        }}
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1079731585&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        seamless>
+        <a href="https://soundcloud.com/lushboy-studios/nameless-pillars">Nameless Pillars by marshall</a>
+      </iframe>
+    ),
+    writtenContent: (
+      <>
+        <p>
+          <em>
+          "Great maps! Design of chapter 2 was super slick"
+          </em> <strong>-- a review by a player, found on Gamebanana</strong>
+        </p>
+        <p>
+          Nameless pillars is a map created for celeste, with custom artwork, music, game elements, and gameplay all created by myself. A desert themed map with
+          plenty of secrets! 
+        </p>
+
+        <p>
+          You can download the mod <a href="https://gamebanana.com/mods/291623">here</a>
+        </p>
+      </>
+    )
+  },
+  
+  donmuchacho: {
+    name: 'Don Muchacho: Vigilante',
+    imageKey: 'donmuchacho',
+    writtenContent: (
+      <>
+        <p>
+          Don Muchacho is a game I developed with friends in a weekend for Ludum Dare 49. It was
+          built using the Defold engine. In this project, I wrote the level transition system, pause menu,
+          composed the music and sfx (implemented with fmod), and helped design some of the levels. We learned the engine as we made the Game
+          during the weekend. This was probably a bad choice, as defold is a complex engine, but we had fun nonetheless.
+        </p>
+        <p>
+          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/don-muchacho-vigilante">itch.io</a>!
+        </p>
+      </>
+    ),
+  },
   surfacelevel: {
     name: 'Surface Level',
     imageKey: 'surfacelevel',
@@ -22,7 +74,7 @@ const projects = {
     imageKey: 'gatetothestars',
     imageContent: (
       <iframe
-        title="glyph"
+        title="gate to the stars"
         style={{
           border: '2px solid rgb(122, 122, 111)',
           width: '270px',
