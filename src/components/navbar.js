@@ -38,7 +38,7 @@ const Navbar = ({ isMobile }) => {
     setOffset(activeNode.offsetLeft)
   }
 
-  const setActiveMenuItem = async (el) => {
+  const setActiveMenuItem = (el) => {
     let navBarEl = document.getElementById(`navbar__border`)
 
     navBarEl.classList.add("navbar__links__bottom_border__transition")
