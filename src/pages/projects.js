@@ -81,7 +81,7 @@ const ProjectsPage = ({ isMobile }) => {
             highlighted={true}
             onBack={() => returnToGrid()}
           />
-          <Spacer marginTop={40} />
+          <Spacer marginTop={80} />
         </>
       )
     } else {
@@ -92,7 +92,7 @@ const ProjectsPage = ({ isMobile }) => {
               <div className="projects__grid">
                 {generateProjectLinks()}
               </div>
-              <Spacer marginTop={20} />
+              <Spacer marginTop={80} />
             </div>
         </>
       )

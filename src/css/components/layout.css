@@ -16,6 +16,6 @@ body {
 
 @media screen and (max-width: 850px) {
   .layout__main_wrapper {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 }
