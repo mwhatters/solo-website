@@ -27,7 +27,6 @@ const Layout = ({ children, alignment, scrollEnabled, isShortScreen }) => {
           siteTitle={data.site.siteMetadata.title} 
         />
       </div>
-      <div className="layout__fake_footer"></div>
     </div>
   )
 }

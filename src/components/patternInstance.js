@@ -21,10 +21,6 @@ const PatternInstance = ({ variation, left, right, top, bottom, position, opacit
   }
 
   return (
-    <></>
-  )
-
-  return (
     <div
       className={animation}
       style={{

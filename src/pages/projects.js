@@ -87,12 +87,13 @@ const ProjectsPage = ({ isMobile }) => {
     } else {
       return (
         <>
-          <div ref={anchor} className="projects__grid__wrapper styled-scroll">
-            <div className="projects__grid">
-              {generateProjectLinks()}
+          <Spacer marginTop={40} />
+            <div ref={anchor} className="projects__grid__wrapper styled-scroll">
+              <div className="projects__grid">
+                {generateProjectLinks()}
+              </div>
+              <Spacer marginTop={20} />
             </div>
-            <Spacer marginTop={100} />
-          </div>
         </>
       )
     }
