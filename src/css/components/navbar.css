@@ -22,7 +22,7 @@
 
 .navbar__links__bottom_border__transition { 
   transition: border-bottom 0.3s ease;
-  transition: width 2s ease;
+  transition: width 1s ease;
   transition: left 1s ease;
 }
 

@@ -10,7 +10,6 @@ import withSizes from 'react-sizes'
 import { timeout } from '../lib/timeout'
 import NavbarBorder from './navbarBorder';
 
-
 const Navbar = ({ isMobile }) => {
   const windowAndDocumentIsDefined = () => {
     return typeof window !== 'undefined' && typeof document !== 'undefined'
@@ -27,7 +26,6 @@ const Navbar = ({ isMobile }) => {
     }
 
     calibrateNavBar()
-    addNavBarTransitionCss()
     window.onresize = calibrateNavBar;
     return;
   }, [])
@@ -40,16 +38,18 @@ const Navbar = ({ isMobile }) => {
     setOffset(activeNode.offsetLeft)
   }
 
-  const addNavBarTransitionCss = async function() {
-    await timeout(50)
+  const setActiveMenuItem = async (el) => {
     let navBarEl = document.getElementById(`navbar__border`)
-    navBarEl.classList.add("navbar__links__bottom_border__transition")
-    return;
-  }
 
-  const setActiveMenuItem = (el) => {
+    navBarEl.classList.add("navbar__links__bottom_border__transition")
     setWidth(el.currentTarget.offsetWidth)
     setOffset(el.currentTarget.offsetLeft)
+
+    const transition = document.querySelector('.navbar__links__bottom_border__transition');
+    transition.addEventListener('transitionend', () => {
+      navBarEl.classList.remove("navbar__links__bottom_border__transition")
+    });
+
   }
 
   return (
