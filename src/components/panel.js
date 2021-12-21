@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Spacer from "../components/util/spacer"
 import "../css/components/panel.css"
+import "../css/components/styled-scroll.css"
 import withSizes from 'react-sizes'
 
 const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
@@ -32,7 +33,7 @@ const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
           </>
         }
         <div className="panel__profile__info_wrapper">
-          <div className="panel__profile__info">
+          <div className="panel__profile__info styled-scroll">
             {header ? <h1>{header}</h1> : null}
             {content}
             <Spacer marginBottom={20} />

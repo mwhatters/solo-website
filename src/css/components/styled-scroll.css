@@ -1,0 +1,14 @@
+.styled-scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+.styled-scroll::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.styled-scroll::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
+}

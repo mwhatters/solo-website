@@ -19,7 +19,7 @@ const Layout = ({ children, alignment, scrollEnabled, isShortScreen }) => {
   return (
     <div>
       <div 
-        className={`layout__main_wrapper ${scrollEnabled || isShortScreen ? 'o__scroll' : ''}`}
+        className={`layout__main_wrapper`}
         style={{ alignItems: alignment }}
         >
         <Body 
