@@ -75,6 +75,7 @@ const ProjectsPage = ({ isMobile }) => {
       let fullProject = projects[currentProject()]
       return (
         <>
+          <Spacer marginTop={40} />
           <ProjectProfile
             project={fullProject}
             highlighted={true}
