@@ -17,6 +17,7 @@ const Navbar = ({ isMobile }) => {
 
   const [width, setWidth] = useState(0)
   const [offset, setOffset] = useState(0)
+  const [transitioning, setTransitioning] = useState(false)
 
   useEffect(() => {
     if (!windowAndDocumentIsDefined()) {
@@ -45,11 +46,10 @@ const Navbar = ({ isMobile }) => {
     setWidth(el.currentTarget.offsetWidth)
     setOffset(el.currentTarget.offsetLeft)
 
-    const transition = document.querySelector('.navbar__links__bottom_border__transition');
+    let transition = document.querySelector('.navbar__links__bottom_border__transition');
     transition.addEventListener('transitionend', () => {
       navBarEl.classList.remove("navbar__links__bottom_border__transition")
     });
-
   }
 
   return (
@@ -61,9 +61,10 @@ const Navbar = ({ isMobile }) => {
             id="nav__/"
             bg="#F5F5DD"
             to="/"
+            duration={0.3}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={setActiveMenuItem}
+            onClick={transitioning ? () => void 0 : setActiveMenuItem}
           >
             {isMobile ? <FaHome /> : "HOME"}
           </AniLink>
@@ -71,9 +72,10 @@ const Navbar = ({ isMobile }) => {
             id="nav__/about/"
             bg="#F5F5DD"
             to="/about/"
+            duration={0.3}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={setActiveMenuItem}
+            onClick={transitioning ? () => void 0 : setActiveMenuItem}
           >
             {isMobile ? <FaAddressCard /> : "ABOUT"}
           </AniLink>
@@ -81,10 +83,11 @@ const Navbar = ({ isMobile }) => {
             id="nav__/projects/"
             bg="#F5F5DD"
             to="/projects/"
+            duration={0.3}
             partiallyActive={true}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={setActiveMenuItem}
+            onClick={transitioning ? () => void 0 : setActiveMenuItem}
           >
             {isMobile ? <FaArchive /> : "PROJECTS"}
           </AniLink>
@@ -92,9 +95,10 @@ const Navbar = ({ isMobile }) => {
             id="nav__/contact/"
             bg="#F5F5DD"
             to="/contact/"
+            duration={0.3}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={setActiveMenuItem}
+            onClick={transitioning ? () => void 0 : setActiveMenuItem}
           >
             {isMobile ? <FaPhone /> : "CONTACT"}
           </AniLink>

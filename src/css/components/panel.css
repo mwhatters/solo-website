@@ -21,14 +21,14 @@
 }
 
 .panel__profile__info_wrapper {
-  height: 400px;
+  height: 412px;
   width: 400px;
 }
 
 .panel__profile__info {
   flex-grow: 2;
   font-size: 15px;
-  height: 400px;
+  height: 412px;
   width: 400px;
   padding-right: 15px;
   overflow: scroll;
