@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useCallback } from 'react';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import { useQueryParam, StringParam } from "use-query-params";
 import queryString from 'query-string'
@@ -16,11 +16,15 @@ import withSizes from 'react-sizes'
 const ProjectsPage = ({ isMobile }) => {
   const [_, setProjectParam] = useQueryParam('project', StringParam);
   const [exitingPage, setExitingPage] = useState(false)
-  const anchor = useRef(null);
+  const [scrollPositionY, setScrollPositionY] = useState(0)
 
-  const scrollToTop = () => {
-    anchor.current.scrollIntoView({ behavior: "auto" })
-  }
+  const anchor = useCallback(node => {
+      if (node == null) { return }
+
+      if (scrollPositionY > 0) {
+        node.scrollTop = scrollPositionY
+      }
+  }, [scrollPositionY]);
 
   const projectIsHighlighted = () => {
     return currentProject() ? true : false;
@@ -40,11 +44,13 @@ const ProjectsPage = ({ isMobile }) => {
   }
 
   const highlightProject = (projectKey) => {
+    let scrollEl = document.querySelector('.projects__grid__wrapper')
+    setScrollPositionY(scrollEl.scrollTop)
     setProjectParam(projectKey)
   }
 
   const returnToGrid = () => {
-    setProjectParam(undefined)
+    setProjectParam(undefined);
   }
 
   const generateProjectLinks = () => {
@@ -80,15 +86,13 @@ const ProjectsPage = ({ isMobile }) => {
     } else {
       return (
         <>
-          <div className="projects__grid__wrapper styled-scroll">
+          <div ref={anchor} className="projects__grid__wrapper styled-scroll">
             <div className="projects__grid">
               {generateProjectLinks()}
             </div>
             <Spacer marginTop={100} />
           </div>
         </>
-
-
       )
     }
   }
@@ -125,7 +129,6 @@ const ProjectsPage = ({ isMobile }) => {
           key={projectIsHighlighted()}
           addEndListener={(node, done) => {
             let enteringNewPage = node.className.match("fade-enter-active");
-            if (enteringNewPage) { scrollToTop() }
             if (enteringNewPage && leavingProjectsPages()) { setExitingPage(true) }
             node.addEventListener("transitionend", done, false)
           }}
@@ -139,7 +142,6 @@ const ProjectsPage = ({ isMobile }) => {
 
   return (
     <Layout>
-      <div ref={anchor} className="projects__main__top" />
         <SEO title="Projects" />
         {!exitingPage && 
           <>

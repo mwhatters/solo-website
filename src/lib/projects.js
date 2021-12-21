@@ -35,40 +35,6 @@ const projects = {
       </>
     )
   },
-  
-  donmuchacho: {
-    name: 'Don Muchacho: Vigilante',
-    imageKey: 'donmuchacho',
-    writtenContent: (
-      <>
-        <p>
-          Don Muchacho is a game I developed with friends in a weekend for Ludum Dare 49. It was
-          built using the Defold engine. In this project, I wrote the level transition system, pause menu,
-          composed the music and sfx (implemented with fmod), and helped design some of the levels. We learned the engine as we made the Game
-          during the weekend. This was probably a bad choice, as defold is a complex engine, but we had fun nonetheless.
-        </p>
-        <p>
-          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/don-muchacho-vigilante">itch.io</a>!
-        </p>
-      </>
-    ),
-  },
-  surfacelevel: {
-    name: 'Surface Level',
-    imageKey: 'surfacelevel',
-    writtenContent: (
-      <>
-        <p>
-          Surface Level is a game I developed with friends in a weekend for Ludum Dare 48. It was
-          built using the virtual console, PICO-8. PICO-8 leverages lua as its scripting language. In this project, I wrote the core game mechanic
-          code, composed the music and sfx, and implemented the level transition system.
-        </p>
-        <p>
-          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/surface-level">itch.io</a>!
-        </p>
-      </>
-    ),
-  },
   gatetothestars: {
     name: 'Gate To The Stars',
     imageKey: 'gatetothestars',
@@ -155,33 +121,33 @@ const projects = {
     ),
     writtenContent: (
       <>
-      <p>
-        <a target="_blank" rel="noreferrer" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
-          <a target="_blank" rel="noreferrer" href="https://youtu.be/0_xY7Gy5uJE">Playthrough of the mod</a>
-      </p>
-      <p>
-        <em>
-            "The only way I can describe this is just... complete. It feels so well thought-out and is fantastically executed. 
-            The puzzles are a well-made bonus instead of a crutch, the music is atmospheric and peaceful, and the gameplay, 
-            while difficult, rarely feel unfair. A hearty round of applause for you, good sir.
-        </em> <strong>-- a review by a player, found on Gamebanana</strong>
-      </p>
-      <p>
-        Glyph is a mod for the popular 2d platformer called <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 250 rooms of gameplay, 
-        custom assets (mostly re-colors of base-game assets), 50+ minutes of original music, and a large amount of custom code (written with C#). It's one of the most
-        popular mods released for the game yet, with over 180 thousand views and 4,000 downloads. It has been featured at high-profile
-        speedrunning events, including <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=_zon5vP6qIo">Summer Games Done Quick</a>
-      </p>
-      <p>
-        This was one of the more affirming experiences I've ever had working with video game design. What most excited me was the
-        use of <a target="_blank" rel="noreferrer" href="https://www.fmod.com/">FMOD</a> to integrate a fully dynamic musical score with the gameplay. The gimmick of the map revolves around traveling through portals
-        to different dimensions. In each dimension, a different ambience and set of instrumentation accompanies the change of scenery. This was both a compositional challenge in a addition to a technical one,
-        but the results were very effective. 
-      </p>
-      <p>
-        I spent an upwards of 4 months total on creating this mod. Most of that time was spent coding custom mechanics and adding gameplay levels. I wrote the score for the game
-        in about 2 weeks.
-      </p>
+        <p>
+          <a target="_blank" rel="noreferrer" href="https://gamebanana.com/maps/209296">Link to Mod</a><br/>
+            <a target="_blank" rel="noreferrer" href="https://youtu.be/0_xY7Gy5uJE">Playthrough of the mod</a>
+        </p>
+        <p>
+          <em>
+              "The only way I can describe this is just... complete. It feels so well thought-out and is fantastically executed. 
+              The puzzles are a well-made bonus instead of a crutch, the music is atmospheric and peaceful, and the gameplay, 
+              while difficult, rarely feel unfair. A hearty round of applause for you, good sir.
+          </em> <strong>-- a review by a player, found on Gamebanana</strong>
+        </p>
+        <p>
+          Glyph is a mod for the popular 2d platformer called <a target="_blank" rel="noreferrer" href="http://www.celestegame.com/">Celeste</a> I made myself. It includes over 250 rooms of gameplay, 
+          custom assets (mostly re-colors of base-game assets), 50+ minutes of original music, and a large amount of custom code (written with C#). It's one of the most
+          popular mods released for the game yet, with over 180 thousand views and 4,000 downloads. It has been featured at high-profile
+          speedrunning events, including <a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=_zon5vP6qIo">Summer Games Done Quick</a>
+        </p>
+        <p>
+          This was one of the more affirming experiences I've ever had working with video game design. What most excited me was the
+          use of <a target="_blank" rel="noreferrer" href="https://www.fmod.com/">FMOD</a> to integrate a fully dynamic musical score with the gameplay. The gimmick of the map revolves around traveling through portals
+          to different dimensions. In each dimension, a different ambience and set of instrumentation accompanies the change of scenery. This was both a compositional challenge in a addition to a technical one,
+          but the results were very effective. 
+        </p>
+        <p>
+          I spent an upwards of 4 months total on creating this mod. Most of that time was spent coding custom mechanics and adding gameplay levels. I wrote the score for the game
+          in about 2 weeks.
+        </p>
       </>
     ),
   },
@@ -233,35 +199,6 @@ const projects = {
           It's been some time since I've worked on this project but I intend to keep producing music in this style. 
           The music can be found on Spotify and all major streaming platforms.
         </p>
-      </div>
-    ),
-  },
-  luna: {
-    name: 'Luna',
-    imageKey: 'luna',
-    writtenContent: (
-      <div>
-        <p>
-          <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
-        </p>
-        <p>
-          <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
-        </p>
-        <p>
-          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna
-          and their journey towards overcoming their creator and defeating his powerful minions. The game is built around the concept of being able to rotate the world you are moving through, 
-          thus affecting the gravity of the player and surrounding objects.
-          It was released in August of 2017 and was my first attempt at designing a video game from scratch.
-          Given my limitations on both a technical and visual level, I'm ultimately proud of this effort. 
-        </p>
-        <div>
-          <p>
-            <strong>Original Trailer</strong>
-          </p>
-          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          <br></br>
-          <br></br>
-        </div>
       </div>
     ),
   },
@@ -344,6 +281,68 @@ const projects = {
         <p>
           The recording engineer for this album was James Meder, who also mixed the tracks.
         </p>
+      </div>
+    ),
+  },
+  donmuchacho: {
+    name: 'Don Muchacho: Vigilante',
+    imageKey: 'donmuchacho',
+    writtenContent: (
+      <>
+        <p>
+          Don Muchacho is a game I developed with friends in a weekend for Ludum Dare 49. It was
+          built using the Defold engine. In this project, I wrote the level transition system, pause menu,
+          composed the music and sfx (implemented with fmod), and helped design some of the levels. We learned the engine as we made the Game
+          during the weekend. This was probably a bad choice, as defold is a complex engine, but we had fun nonetheless.
+        </p>
+        <p>
+          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/don-muchacho-vigilante">itch.io</a>!
+        </p>
+      </>
+    ),
+  },
+  surfacelevel: {
+    name: 'Surface Level',
+    imageKey: 'surfacelevel',
+    writtenContent: (
+      <>
+        <p>
+          Surface Level is a game I developed with friends in a weekend for Ludum Dare 48. It was
+          built using the virtual console, PICO-8. PICO-8 leverages lua as its scripting language. In this project, I wrote the core game mechanic
+          code, composed the music and sfx, and implemented the level transition system.
+        </p>
+        <p>
+          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/surface-level">itch.io</a>!
+        </p>
+      </>
+    ),
+  },
+  luna: {
+    name: 'Luna',
+    imageKey: 'luna',
+    writtenContent: (
+      <div>
+        <p>
+          <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
+        </p>
+        <p>
+          <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
+        </p>
+        <p>
+          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna
+          and their journey towards overcoming their creator and defeating his powerful minions. The game is built around the concept of being able to rotate the world you are moving through, 
+          thus affecting the gravity of the player and surrounding objects.
+          It was released in August of 2017 and was my first attempt at designing a video game from scratch.
+          Given my limitations on both a technical and visual level, I'm ultimately proud of this effort. 
+        </p>
+        <div>
+          <p>
+            <strong>Original Trailer</strong>
+          </p>
+          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <br></br>
+          <br></br>
+        </div>
       </div>
     ),
   },
