@@ -36,21 +36,6 @@
   text-align: left;
 }
 
-.panel__profile__info::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 5px;
-}
-
-.panel__profile__info::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, .2);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
-
-.panel__profile__info::-webkit-scrollbar-corner {
-  background: rgba(0,0,0,0);
-}
-
 /* MOBILE */
 
 .panel__mobile__wrapper {

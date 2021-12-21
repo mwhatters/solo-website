@@ -23,7 +23,7 @@ const SocialMediaIcons = () => {
         </SocialMediaIcon>
         
         <SocialMediaIcon href="https://soundcloud.com/lushboy-studios">
-        <FaSoundcloud />
+          <FaSoundcloud />
         </SocialMediaIcon>
         
         <SocialMediaIcon href="https://drive.google.com/file/d/1oMv06EKCDOcHM_CaPkJ7mCDDuUtqbdve/view?usp=sharing">

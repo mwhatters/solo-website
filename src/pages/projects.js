@@ -4,6 +4,7 @@ import { useQueryParam, StringParam } from "use-query-params";
 import queryString from 'query-string'
 import projects from '../lib/projects' 
 import "../css/pages/projects.css"
+import "../css/components/styled-scroll.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -73,18 +74,21 @@ const ProjectsPage = ({ isMobile }) => {
             highlighted={true}
             onBack={() => returnToGrid()}
           />
-          <div className="projects__post_wrapper"></div>
+          <Spacer marginTop={40} />
         </>
       )
     } else {
       return (
-        <div className="projects__grid__wrapper">
-          <Spacer marginTop={40} />
-          <div className="projects__grid">
-            {generateProjectLinks()}
+        <>
+          <div className="projects__grid__wrapper styled-scroll">
+            <div className="projects__grid">
+              {generateProjectLinks()}
+            </div>
+            <Spacer marginTop={100} />
           </div>
-          <div className="projects__post_wrapper"></div>
-        </div>
+        </>
+
+
       )
     }
   }
@@ -98,13 +102,11 @@ const ProjectsPage = ({ isMobile }) => {
           classNames='fade'
         >
           <div style={{ position: 'relative' }}>
-            <PatternInstance opacity={0.2} top={-50} left={-100} variation={6} animation="g3" />
-            <PatternInstance opacity={0.2} top={150} left={-400} variation={3} animation="g5" />
+            <PatternInstance opacity={0.2} top={0} left={-100} variation={6} animation="g3" />
+            <PatternInstance opacity={0.2} top={50} left={-400} variation={3} animation="g5" />
             <PatternInstance opacity={0.2} top={0} right={-400} variation={2} animation="g6" />
-            <PatternInstance opacity={0.2} top={400} left={-150} variation={5} animation="g1" />
             <PatternInstance opacity={0.2} bottom={-10} right={-130} variation={7} animation="g2" />
-            <PatternInstance opacity={0.2} bottom={-640} right={-200} variation={4} animation="g-main" />
-            <PatternInstance opacity={0.2} bottom={-1000} right={100} variation={8} animation="g4" />
+            <PatternInstance opacity={0.2} bottom={-540} right={-200} variation={4} animation="g-main" />
           </div>
         </CSSTransition>
       </SwitchTransition>
@@ -136,10 +138,9 @@ const ProjectsPage = ({ isMobile }) => {
   }
 
   return (
-    <Layout scrollEnabled={!currentProject()}>
+    <Layout>
       <div ref={anchor} className="projects__main__top" />
         <SEO title="Projects" />
-        <Spacer flex={0} marginTop={isMobile ? 0 : 50} />
         {!exitingPage && 
           <>
             {backgroundContent()}
