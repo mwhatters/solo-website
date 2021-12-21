@@ -11,7 +11,7 @@ import "../css/pages/contact.css"
 const ContactPage = ({ isMobile }) => {
   const contactContent = (
     <>
-      {isMobile && <Spacer marginTop={40} />}
+      {/* {isMobile && <Spacer marginTop={40} />} */}
       <div className="contact__main_info">
         <h1>contact me</h1>
         I'm looking for work in music, web / software development, and game design!
@@ -25,7 +25,7 @@ const ContactPage = ({ isMobile }) => {
         <br />
         You can find the source code for it <a target="_blank" rel="noreferrer" href="https://github.com/mwhatters/solo-website">here</a>
       </div>
-      <Spacer marginTop={40} />
+      {/* <Spacer marginTop={40} /> */}
     </>
   )
 
