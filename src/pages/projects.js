@@ -74,7 +74,7 @@ const ProjectsPage = ({ isMobile }) => {
             highlighted={true}
             onBack={() => returnToGrid()}
           />
-          <div className="projects__post_wrapper"></div>
+          <Spacer marginTop={40} />
         </>
       )
     } else {
@@ -83,6 +83,7 @@ const ProjectsPage = ({ isMobile }) => {
           <div className="projects__grid">
             {generateProjectLinks()}
           </div>
+          <Spacer marginTop={100} />
         </div>
       )
     }
@@ -100,7 +101,7 @@ const ProjectsPage = ({ isMobile }) => {
             <PatternInstance opacity={0.2} top={-50} left={-100} variation={6} animation="g3" />
             <PatternInstance opacity={0.2} top={150} left={-400} variation={3} animation="g5" />
             <PatternInstance opacity={0.2} top={0} right={-400} variation={2} animation="g6" />
-            <PatternInstance opacity={0.2} top={200} left={-150} variation={5} animation="g1" />
+            <PatternInstance opacity={0.2} top={300} left={-50} variation={5} animation="g1" />
             <PatternInstance opacity={0.2} bottom={-10} right={-130} variation={7} animation="g2" />
             <PatternInstance opacity={0.2} bottom={-540} right={-200} variation={4} animation="g-main" />
           </div>

@@ -9,14 +9,20 @@
   margin-bottom: 20px;
 }
 
-.projects__post_wrapper {
-  height: 40px;
-}
-
 .projects__grid__wrapper {
   max-height: 80vh;
   padding-right: 10px;
   overflow: scroll;
+}
+
+.projects__grid__wrapper:after {
+  content:'';
+  width: 100%;
+  height: 30px;    
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  background: linear-gradient(transparent 0px, beige);
 }
 
 .projects__grid {
