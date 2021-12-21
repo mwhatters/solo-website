@@ -36,7 +36,7 @@ const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
           <div className="panel__profile__info styled-scroll">
             {header ? <h1>{header}</h1> : null}
             {content}
-            <Spacer marginBottom={20} />
+            <Spacer marginBottom={100} />
           </div>
         </div>
       </div>
