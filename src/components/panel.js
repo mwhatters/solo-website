@@ -17,7 +17,7 @@ const Panel = ({ imageContent, content, header, backButton, isMobile }) => {
         <Spacer marginTop={40} />
         {content}
         <Spacer marginTop={10} />
-        {backButton && <>{backButton}</>}
+        {/* {backButton && <>{backButton}</>} */}
       </div>
     </div>
   )

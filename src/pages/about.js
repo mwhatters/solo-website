@@ -51,6 +51,7 @@ const AboutPage = ({ isMobile }) => {
           imageContent={profileImageContent}
           content={profileContent}
         />
+        <Spacer marginTop={40} />
         {backgroundContent()}
       </div>
     </Layout>
