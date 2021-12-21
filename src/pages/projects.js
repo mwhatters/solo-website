@@ -92,7 +92,7 @@ const ProjectsPage = ({ isMobile }) => {
               <div className="projects__grid">
                 {generateProjectLinks()}
               </div>
-              <Spacer marginTop={80} />
+              <Spacer marginTop={150} />
             </div>
         </>
       )
