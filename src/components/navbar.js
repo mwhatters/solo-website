@@ -17,7 +17,6 @@ const Navbar = ({ isMobile }) => {
 
   const [width, setWidth] = useState(0)
   const [offset, setOffset] = useState(0)
-  const [transitioning, setTransitioning] = useState(false)
 
   useEffect(() => {
     if (!windowAndDocumentIsDefined()) {
@@ -64,7 +63,7 @@ const Navbar = ({ isMobile }) => {
             duration={0.3}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={transitioning ? () => void 0 : setActiveMenuItem}
+            onClick={setActiveMenuItem}
           >
             {isMobile ? <FaHome /> : "HOME"}
           </AniLink>
@@ -75,7 +74,7 @@ const Navbar = ({ isMobile }) => {
             duration={0.3}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={transitioning ? () => void 0 : setActiveMenuItem}
+            onClick={setActiveMenuItem}
           >
             {isMobile ? <FaAddressCard /> : "ABOUT"}
           </AniLink>
@@ -87,7 +86,7 @@ const Navbar = ({ isMobile }) => {
             partiallyActive={true}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={transitioning ? () => void 0 : setActiveMenuItem}
+            onClick={setActiveMenuItem}
           >
             {isMobile ? <FaArchive /> : "PROJECTS"}
           </AniLink>
@@ -98,7 +97,7 @@ const Navbar = ({ isMobile }) => {
             duration={0.3}
             className="navbar__link"
             activeClassName="navbar__link-selected"
-            onClick={transitioning ? () => void 0 : setActiveMenuItem}
+            onClick={setActiveMenuItem}
           >
             {isMobile ? <FaPhone /> : "CONTACT"}
           </AniLink>
