@@ -1,7 +1,7 @@
 .styled-scroll {
   background-size: cover;
   background-position: center;
-  mask-image: linear-gradient(to top, transparent 5%, black 25%);
+  mask-image: linear-gradient(to top, transparent 5%, black 15%);
 }
 
 .styled-scroll::-webkit-scrollbar {
