@@ -35,39 +35,6 @@ const projects = {
       </>
     )
   },
-  donmuchacho: {
-    name: 'Don Muchacho: Vigilante',
-    imageKey: 'donmuchacho',
-    writtenContent: (
-      <>
-        <p>
-          Don Muchacho is a game I developed with friends in a weekend for Ludum Dare 49. It was
-          built using the Defold engine. In this project, I wrote the level transition system, pause menu,
-          composed the music and sfx (implemented with fmod), and helped design some of the levels. We learned the engine as we made the Game
-          during the weekend. This was probably a bad choice, as defold is a complex engine, but we had fun nonetheless.
-        </p>
-        <p>
-          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/don-muchacho-vigilante">itch.io</a>!
-        </p>
-      </>
-    ),
-  },
-  surfacelevel: {
-    name: 'Surface Level',
-    imageKey: 'surfacelevel',
-    writtenContent: (
-      <>
-        <p>
-          Surface Level is a game I developed with friends in a weekend for Ludum Dare 48. It was
-          built using the virtual console, PICO-8. PICO-8 leverages lua as its scripting language. In this project, I wrote the core game mechanic
-          code, composed the music and sfx, and implemented the level transition system.
-        </p>
-        <p>
-          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/surface-level">itch.io</a>!
-        </p>
-      </>
-    ),
-  },
   gatetothestars: {
     name: 'Gate To The Stars',
     imageKey: 'gatetothestars',
@@ -235,35 +202,6 @@ const projects = {
       </div>
     ),
   },
-  luna: {
-    name: 'Luna',
-    imageKey: 'luna',
-    writtenContent: (
-      <div>
-        <p>
-          <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
-        </p>
-        <p>
-          <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
-        </p>
-        <p>
-          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna
-          and their journey towards overcoming their creator and defeating his powerful minions. The game is built around the concept of being able to rotate the world you are moving through, 
-          thus affecting the gravity of the player and surrounding objects.
-          It was released in August of 2017 and was my first attempt at designing a video game from scratch.
-          Given my limitations on both a technical and visual level, I'm ultimately proud of this effort. 
-        </p>
-        <div>
-          <p>
-            <strong>Original Trailer</strong>
-          </p>
-          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          <br></br>
-          <br></br>
-        </div>
-      </div>
-    ),
-  },
   ontothemoon: {
     name: 'On to the Moon',
     imageKey: 'ontothemoon',
@@ -343,6 +281,68 @@ const projects = {
         <p>
           The recording engineer for this album was James Meder, who also mixed the tracks.
         </p>
+      </div>
+    ),
+  },
+  donmuchacho: {
+    name: 'Don Muchacho: Vigilante',
+    imageKey: 'donmuchacho',
+    writtenContent: (
+      <>
+        <p>
+          Don Muchacho is a game I developed with friends in a weekend for Ludum Dare 49. It was
+          built using the Defold engine. In this project, I wrote the level transition system, pause menu,
+          composed the music and sfx (implemented with fmod), and helped design some of the levels. We learned the engine as we made the Game
+          during the weekend. This was probably a bad choice, as defold is a complex engine, but we had fun nonetheless.
+        </p>
+        <p>
+          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/don-muchacho-vigilante">itch.io</a>!
+        </p>
+      </>
+    ),
+  },
+  surfacelevel: {
+    name: 'Surface Level',
+    imageKey: 'surfacelevel',
+    writtenContent: (
+      <>
+        <p>
+          Surface Level is a game I developed with friends in a weekend for Ludum Dare 48. It was
+          built using the virtual console, PICO-8. PICO-8 leverages lua as its scripting language. In this project, I wrote the core game mechanic
+          code, composed the music and sfx, and implemented the level transition system.
+        </p>
+        <p>
+          You can play the game on <a target="_blank" rel="noreferrer" href="https://javijavi7.itch.io/surface-level">itch.io</a>!
+        </p>
+      </>
+    ),
+  },
+  luna: {
+    name: 'Luna',
+    imageKey: 'luna',
+    writtenContent: (
+      <div>
+        <p>
+          <a target="_blank" rel="noreferrer" href="https://store.steampowered.com/app/666810/Luna/">Link to Game</a>
+        </p>
+        <p>
+          <em>simple enough for anyone can pick up, yet challenging enough its hard to put down. Well worth the price tag.</em> -- <strong>customer review on steam store</strong>
+        </p>
+        <p>
+          Luna is an original, full length 2d platformer I created in Unity over a 1.5 year period. It features the story of a character named Luna
+          and their journey towards overcoming their creator and defeating his powerful minions. The game is built around the concept of being able to rotate the world you are moving through, 
+          thus affecting the gravity of the player and surrounding objects.
+          It was released in August of 2017 and was my first attempt at designing a video game from scratch.
+          Given my limitations on both a technical and visual level, I'm ultimately proud of this effort. 
+        </p>
+        <div>
+          <p>
+            <strong>Original Trailer</strong>
+          </p>
+          <iframe title="lunaTrailer" width="95%" height="315" src="https://www.youtube.com/embed/9YIxb9ar6mY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <br></br>
+          <br></br>
+        </div>
       </div>
     ),
   },
