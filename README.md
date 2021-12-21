@@ -10,13 +10,16 @@ All of the assets were made by myself in photoshop. Most of the project art was 
 
 ### deployment
 
+
+Use yarn to get yourself up and running with `yarn install`
+To run the project in development, use `npm run develop`
+
 This site uses [travisci](https://www.travis-ci.com) to auto deploy any changes to a [linode server](https://www.linode.com/) when i merge pull requests into master.
+
+View a preview build with Netlify, you can find a link to it from the PR you make
 
 ### TODO
 
-- Set up SSL for mwhatt.com / add https (Done)
-- Persistent navbar (Done, with some minor visual bugs on active resize)
-- Do some copy editing and review
 - cleanup some code / potentially wonky css issues on mobile
 - improve accessibility features
 - add SEO information
